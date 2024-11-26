@@ -1,0 +1,32 @@
+// basic
+@import "reset";
+@import "vars";
+@import "mixins";
+@import "base";
+
+// sections
+@import "sections/navbar.scss";
+@import "sections/home.scss";
+@import "sections/education.scss";
+@import "sections/skills.scss";
+@import "sections/projects.scss";
+@import "sections/contacts.scss";
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: 
+        url("fonts/Poppinsregular.woff") format("woff"),
+        url("fonts/Poppinsregular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: 
+        url("fonts/Poppinspoppins-boldsemibold.woff") format("woff"),
+        url("fonts/Poppinspoppins-boldsemibold.woff2") format("woff2");
+}
+
