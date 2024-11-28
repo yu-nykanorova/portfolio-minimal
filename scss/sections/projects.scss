@@ -1,0 +1,29 @@
+.projects {
+    display: none;
+
+	&__title { }
+	&__desc { }
+
+	&__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+	&__item {
+        position: relative;
+
+        &-image { }
+
+        &-info {
+            position: absolute;
+        }
+
+        &-title { }
+
+        &-detail { }
+    }
+	&__item-image { }
+	&__item-info { }
+	&__item-title { }
+	&__item-detail { }
+}

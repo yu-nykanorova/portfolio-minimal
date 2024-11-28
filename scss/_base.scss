@@ -10,26 +10,28 @@ body {
 	font-size: 16rem;
 	font-family: var(--font-family);
 	background-image: url("img/sea_light_storm.jpg");
-	//background: no-repeat linear-gradient(300deg, rgba(68,20,87,0.7) 0%, rgba(148,62,163,0.5) 35%, rgba(239,217,250,0.5) 100%);
 	background-size: cover;
 	background-attachment: fixed;
 	display: flex;
-	align-items: center;
+	//align-items: center;
 	justify-content: center;
 }
 
 .container {
 	width: 100%;
-	padding: 50rem 15%;
+	min-height: 100%;
+	padding: 5% 15%;
 	border: 2px solid red;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.7);
+	overflow-y: auto;
 }
 
 .content {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	padding: 10rem 0;
 	border: 2px solid green;
 }
@@ -44,6 +46,7 @@ body {
 
 .main {
 	width: 100%;
-	border: 2px solid purple;
+	//border: 2px solid purple;
 	background: rgba(255, 255, 255, 0.7);
+	border-radius: 10rem;
 }

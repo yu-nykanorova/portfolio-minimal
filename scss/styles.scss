@@ -15,12 +15,29 @@
 @font-face {
     font-family: "Poppins";
     font-style: normal;
+    font-weight: 300;
+    src: 
+        url("fonts/Poppinslight.woff") format("woff"),
+        url("fonts/Poppinslight.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
     font-weight: 400;
     src: 
         url("fonts/Poppinsregular.woff") format("woff"),
         url("fonts/Poppinsregular.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    src: 
+        url("fonts/Poppinspoppins-semiboldmedium.woff") format("woff"),
+        url("fonts/Poppinspoppins-semiboldmedium.woff2") format("woff2");
+}
 @font-face {
     font-family: "Poppins";
     font-style: normal;

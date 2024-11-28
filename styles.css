@@ -40,7 +40,8 @@ img {
   border-style: none; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
   a:hover {
     text-decoration: none; }
 
@@ -68,20 +69,20 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
 
 .container {
   width: 100%;
-  padding: 50rem 15%;
+  min-height: 100%;
+  padding: 5% 15%;
   border: 2px solid red;
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.7);
+  overflow-y: auto; }
 
 .content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,9 +93,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 10rem 0;
   border: 2px solid green; }
 
@@ -113,8 +114,8 @@ body {
 
 .main {
   width: 100%;
-  border: 2px solid purple;
-  background: rgba(255, 255, 255, 0.7); }
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10rem; }
 
 .navbar {
   margin-bottom: 20rem;
@@ -129,7 +130,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 10rem; }
+    gap: 20rem; }
   .navbar__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -144,13 +145,29 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 5rem; }
+    gap: 5rem;
+    position: relative; }
+    .navbar__item:hover .navbar__item-title {
+      opacity: 1; }
+    .navbar__item::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -21rem;
+      left: calc(50%-9rem);
+      border-bottom: solid 18rem rgba(255, 255, 255, 0.7);
+      border-left: solid 18rem transparent;
+      border-right: solid 18rem transparent; }
     .navbar__item .fa-solid {
       color: var(--c-white);
       font-size: 34rem; }
     .navbar__item-title {
       font-size: 14rem;
-      color: var(--c-white); }
+      font-weight: 300;
+      color: var(--c-white);
+      opacity: 0;
+      -webkit-transition: var(--transition);
+      transition: var(--transition); }
 
 .home {
   display: -webkit-box;
@@ -162,14 +179,54 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .home__welcome {
+    padding: 50rem; }
+    .home__welcome-title {
+      font-size: 48rem;
+      font-weight: 300;
+      margin-bottom: 50rem; }
+      .home__welcome-title span {
+        font-weight: 500; }
+    .home__welcome-desc {
+      font-size: 20rem;
+      font-weight: 300; }
   .home__image {
-    max-width: 400rem; }
+    max-width: 300rem;
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .home__image img {
+      -o-object-fit: cover;
+         object-fit: cover; }
 
+.projects {
+  display: none; }
+  .projects__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+  .projects__item {
+    position: relative; }
+    .projects__item-info {
+      position: absolute; }
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("fonts/Poppinslight.woff") format("woff"), url("fonts/Poppinslight.woff2") format("woff2"); }
 @font-face {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   src: url("fonts/Poppinsregular.woff") format("woff"), url("fonts/Poppinsregular.woff2") format("woff2"); }
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/Poppinspoppins-semiboldmedium.woff") format("woff"), url("fonts/Poppinspoppins-semiboldmedium.woff2") format("woff2"); }
 @font-face {
   font-family: "Poppins";
   font-style: normal;

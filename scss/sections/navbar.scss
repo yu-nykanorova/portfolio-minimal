@@ -6,7 +6,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 10rem;
+        gap: 20rem;
     }
 
     &__item {
@@ -15,6 +15,25 @@
         justify-content: center;
         align-items: center;
         gap: 5rem;
+        position: relative;
+
+        &:hover {
+            .navbar__item-title {
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -21rem;
+            left: calc(50%-9rem);
+            border-bottom: solid 18rem rgba(255, 255, 255, 0.7);
+            border-left: solid 18rem transparent;
+            border-right: solid 18rem transparent;
+        }
+
         .fa-solid {
             color: var(--c-white);
             font-size: 34rem;
@@ -22,7 +41,10 @@
 
         &-title {
             font-size: 14rem;
+            font-weight: 300;
             color: var(--c-white);
+            opacity: 0;
+            transition: var(--transition);
         }
     }
 }

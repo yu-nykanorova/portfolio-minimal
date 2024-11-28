@@ -4,13 +4,33 @@
     align-items: center;
 
     &__welcome {
+        padding: 50rem;
 
-        &-title {}
+        &-title {
+            font-size: 48rem;
+            font-weight: 300;
+            margin-bottom: 50rem;
 
-        &-desc {}
+            span {
+                font-weight: 500;
+            }
+        }
+
+        &-desc {
+            font-size: 20rem;
+            font-weight: 300;
+        }
     }
 
     &__image {
-        max-width: 400rem;
+        max-width: 300rem;
+        border-top-right-radius: 10rem;
+	    border-bottom-right-radius: 10rem;
+        overflow: hidden;
+        display: flex;
+
+        img {
+            object-fit: cover;
+        }
     }
 }
