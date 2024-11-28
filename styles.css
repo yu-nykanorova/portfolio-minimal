@@ -62,8 +62,7 @@ html {
 body {
   font-size: 16rem;
   font-family: var(--font-family);
-  background: no-repeat -webkit-gradient(linear, left bottom, left top, from(rgba(68, 20, 87, 0.7)), color-stop(35%, rgba(148, 62, 163, 0.5)), to(rgba(239, 217, 250, 0.5)));
-  background: no-repeat linear-gradient(0deg, rgba(68, 20, 87, 0.7) 0%, rgba(148, 62, 163, 0.5) 35%, rgba(239, 217, 250, 0.5) 100%);
+  background-image: url("img/sea_light_storm.jpg");
   background-size: cover;
   background-attachment: fixed;
   display: -webkit-box;
@@ -79,7 +78,8 @@ body {
 .container {
   width: 100%;
   padding: 50rem 15%;
-  border: 2px solid red; }
+  border: 2px solid red;
+  background: rgba(0, 0, 0, 0.5); }
 
 .content {
   display: -webkit-box;
@@ -112,11 +112,13 @@ body {
   margin-bottom: 30rem; }
 
 .main {
-  width: 100%; }
+  width: 100%;
+  border: 2px solid purple;
+  background: rgba(255, 255, 255, 0.7); }
 
 .navbar {
   margin-bottom: 20rem;
-  width: 30%; }
+  min-width: 30%; }
   .navbar__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -126,7 +128,29 @@ body {
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    gap: 10rem; }
+  .navbar__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5rem; }
+    .navbar__item .fa-solid {
+      color: var(--c-white);
+      font-size: 34rem; }
+    .navbar__item-title {
+      font-size: 14rem;
+      color: var(--c-white); }
 
 .home {
   display: -webkit-box;
@@ -138,6 +162,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .home__image {
+    max-width: 400rem; }
 
 @font-face {
   font-family: "Poppins";

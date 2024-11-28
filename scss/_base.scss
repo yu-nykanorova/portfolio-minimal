@@ -9,7 +9,8 @@ html {
 body {
 	font-size: 16rem;
 	font-family: var(--font-family);
-	background: no-repeat linear-gradient(0deg, rgba(68,20,87,0.7) 0%, rgba(148,62,163,0.5) 35%, rgba(239,217,250,0.5) 100%);
+	background-image: url("img/sea_light_storm.jpg");
+	//background: no-repeat linear-gradient(300deg, rgba(68,20,87,0.7) 0%, rgba(148,62,163,0.5) 35%, rgba(239,217,250,0.5) 100%);
 	background-size: cover;
 	background-attachment: fixed;
 	display: flex;
@@ -21,6 +22,7 @@ body {
 	width: 100%;
 	padding: 50rem 15%;
 	border: 2px solid red;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .content {
@@ -42,4 +44,6 @@ body {
 
 .main {
 	width: 100%;
+	border: 2px solid purple;
+	background: rgba(255, 255, 255, 0.7);
 }
