@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30rem;
 
     &__welcome {
         padding: 50rem 50rem 50rem 70rem;
@@ -29,8 +30,17 @@
             align-items: center;
             gap: 20rem;
 
-            .btn-cv {}
-            .btn-contact {}
+            .btn-cv {
+                padding: 12rem 14rem;
+                width: 200rem;
+                background: var(--c-brand-blue);
+            }
+
+            .btn-contact {
+                padding: 12rem 14rem;
+                width: 200rem;
+                background: var(--c-brand-blue);
+            }
         }
     }
 

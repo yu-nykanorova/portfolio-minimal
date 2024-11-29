@@ -70,3 +70,13 @@ body {
 	font-weight: 300;
 	margin-bottom: 5rem;
 }
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	font-size: 20rem;
+	font-weight: 500;
+	border-radius: 10rem;
+}

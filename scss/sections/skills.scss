@@ -1,0 +1,40 @@
+.skills {
+    margin-bottom: 30rem;
+
+	&__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20rem;
+    }
+
+	&__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80rem;
+        gap: 10rem;
+        background: var(--c-brand-white);
+        border-radius: 10rem;
+
+        &-image {
+            border-radius: 10rem 10rem 0 0;
+            padding: 4rem;
+
+            img {
+                border-radius: 10rem 10rem 0 0;
+            }
+        }
+
+	    &-name {
+            padding: 4rem;
+            background: var(--c-brand-blue);
+            align-self: stretch;
+            text-align: center;
+            border-radius: 0 0 10rem 10rem;
+            font-size: 16rem;
+            font-weight: 500;
+        }
+    }
+}
