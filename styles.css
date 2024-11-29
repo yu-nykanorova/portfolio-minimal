@@ -52,7 +52,12 @@ li {
   --font-family: "Poppins", sans-serif;
   --transition: .2s all ease-in-out;
   --c-white: #fff;
-  --c-black: #000; }
+  --c-black: #000;
+  --c-brand-white: rgb(247, 242, 233);
+  --c-brand-white-half-transp: rgba(247, 242, 233, 0.7);
+  --c-brand-blue: #75adb1;
+  --c-brand-dark-blue: #06234e;
+  --c-brand-dark-brown: #50312f; }
 
 html, body {
   height: 100%; }
@@ -78,11 +83,13 @@ body {
   min-height: 100%;
   padding: 5% 15%;
   border: 2px solid red;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   overflow-y: auto; }
 
 .content {
   width: 100%;
+  max-width: 1400rem;
+  margin-inline: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,6 +104,7 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 10rem 0;
+  color: var(--c-brand-dark-blue);
   border: 2px solid green; }
 
 .logo {
@@ -110,12 +118,28 @@ body {
       -ms-flex-align: center;
           align-items: center;
   max-width: 60rem;
-  margin-bottom: 30rem; }
+  margin-bottom: 30rem;
+  position: relative; }
+  .logo::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    width: 160%;
+    height: 1rem;
+    background: var(--c-brand-white); }
 
 .main {
   width: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 10rem; }
+  background: var(--c-brand-white-half-transp);
+  border-radius: 10rem;
+  margin-bottom: 30rem; }
+
+.footer {
+  color: var(--c-brand-white);
+  font-size: 18rem;
+  font-weight: 300;
+  margin-bottom: 5rem; }
 
 .navbar {
   margin-bottom: 20rem;
@@ -153,14 +177,15 @@ body {
       content: "";
       display: block;
       position: absolute;
-      bottom: -21rem;
+      bottom: -20.5rem;
       left: calc(50%-9rem);
-      border-bottom: solid 18rem rgba(255, 255, 255, 0.7);
+      border-bottom: solid 18rem var(--c-brand-white-half-transp);
       border-left: solid 18rem transparent;
       border-right: solid 18rem transparent; }
     .navbar__item .fa-solid {
-      color: var(--c-white);
-      font-size: 34rem; }
+      color: var(--c-brand-white);
+      font-size: 34rem;
+      opacity: 0.8; }
     .navbar__item-title {
       font-size: 14rem;
       font-weight: 300;
@@ -180,16 +205,27 @@ body {
       -ms-flex-align: center;
           align-items: center; }
   .home__welcome {
-    padding: 50rem; }
+    padding: 50rem 50rem 50rem 70rem; }
     .home__welcome-title {
-      font-size: 48rem;
-      font-weight: 300;
-      margin-bottom: 50rem; }
+      font-size: 44rem;
+      font-weight: 400;
+      margin-bottom: 40rem; }
       .home__welcome-title span {
-        font-weight: 500; }
+        font-size: 46rem;
+        font-weight: 600;
+        color: var(--c-brand-dark-brown); }
     .home__welcome-desc {
-      font-size: 20rem;
-      font-weight: 300; }
+      font-size: 24rem;
+      font-weight: 400;
+      margin-bottom: 40rem; }
+    .home__welcome-buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 20rem; }
   .home__image {
     max-width: 300rem;
     border-top-right-radius: 10rem;
@@ -203,14 +239,33 @@ body {
          object-fit: cover; }
 
 .projects {
-  display: none; }
+  display: block;
+  padding: 30rem; }
   .projects__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; }
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 50rem; }
   .projects__item {
     position: relative; }
     .projects__item-info {
       position: absolute; }
+  .projects__btn-more {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 12rem 23rem;
+    width: 200rem;
+    margin-inline: auto;
+    background: var(--c-brand-blue);
+    font-size: 20rem;
+    font-weight: 500;
+    border-radius: 10rem; }
 
 @font-face {
   font-family: "Poppins";

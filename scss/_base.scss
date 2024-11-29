@@ -13,7 +13,6 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	display: flex;
-	//align-items: center;
 	justify-content: center;
 }
 
@@ -22,17 +21,20 @@ body {
 	min-height: 100%;
 	padding: 5% 15%;
 	border: 2px solid red;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.5);
 	overflow-y: auto;
 }
 
 .content {
 	width: 100%;
+	max-width: 1400rem;
+	margin-inline: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
 	padding: 10rem 0;
+	color: var(--c-brand-dark-blue);
 	border: 2px solid green;
 }
 
@@ -42,11 +44,29 @@ body {
 	align-items: center;
 	max-width: 60rem;
 	margin-bottom: 30rem;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: "";
+		display: block;
+		bottom: 0;
+		width: 160%;
+		height: 1rem;
+		background: var(--c-brand-white);
+	}
 }
 
 .main {
 	width: 100%;
-	//border: 2px solid purple;
-	background: rgba(255, 255, 255, 0.7);
+	background: var(--c-brand-white-half-transp);
 	border-radius: 10rem;
+	margin-bottom: 30rem;
+}
+
+.footer {
+	color: var(--c-brand-white);
+	font-size: 18rem;
+	font-weight: 300;
+	margin-bottom: 5rem;
 }

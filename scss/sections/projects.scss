@@ -1,5 +1,7 @@
 .projects {
-    display: none;
+    //display: none;
+    display: block;
+    padding: 30rem;
 
 	&__title { }
 	&__desc { }
@@ -7,6 +9,7 @@
 	&__list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 50rem;
     }
 
 	&__item {
@@ -26,4 +29,17 @@
 	&__item-info { }
 	&__item-title { }
 	&__item-detail { }
+
+    &__btn-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12rem 23rem;
+        width: 200rem;
+        margin-inline: auto;
+        background: var(--c-brand-blue);
+        font-size: 20rem;
+        font-weight: 500;
+        border-radius: 10rem;
+    }
 }

@@ -4,21 +4,33 @@
     align-items: center;
 
     &__welcome {
-        padding: 50rem;
+        padding: 50rem 50rem 50rem 70rem;
 
         &-title {
-            font-size: 48rem;
-            font-weight: 300;
-            margin-bottom: 50rem;
+            font-size: 44rem;
+            font-weight: 400;
+            margin-bottom: 40rem;
 
             span {
-                font-weight: 500;
+                font-size: 46rem;
+                font-weight: 600;
+                color: var(--c-brand-dark-brown);
             }
         }
 
         &-desc {
-            font-size: 20rem;
-            font-weight: 300;
+            font-size: 24rem;
+            font-weight: 400;
+            margin-bottom: 40rem;
+        }
+
+        &-buttons {
+            display: flex;
+            align-items: center;
+            gap: 20rem;
+
+            .btn-cv {}
+            .btn-contact {}
         }
     }
 
