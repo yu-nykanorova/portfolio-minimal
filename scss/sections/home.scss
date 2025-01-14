@@ -5,7 +5,7 @@
     margin-bottom: 30rem;
 
     &__welcome {
-        padding: 50rem 50rem 50rem 70rem;
+        padding: 50rem 20rem 50rem 50rem;
 
         &-title {
             font-size: 44rem;
@@ -29,17 +29,23 @@
             display: flex;
             align-items: center;
             gap: 20rem;
+            color: var(--c-brand-white);
+            letter-spacing: 1rem;
 
-            .btn-cv {
+            .btn-cv, .btn-contact {
                 padding: 12rem 14rem;
                 width: 200rem;
-                background: var(--c-brand-blue);
+                font-weight: 400;
+            }
+
+            .btn-cv {
+                background: var(--c-brand-dark-blue);
             }
 
             .btn-contact {
-                padding: 12rem 14rem;
-                width: 200rem;
-                background: var(--c-brand-blue);
+                background: var(--c-brand-beige);
+                color: var(--c-brand-dark-brown);
+                font-weight: 500;
             }
         }
     }

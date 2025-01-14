@@ -27,7 +27,7 @@
             content: "";
             display: block;
             position: absolute;
-            bottom: -20.5rem;
+            bottom: -21rem;
             left: calc(50%-9rem);
             border-bottom: solid 18rem var(--c-brand-white-half-transp);
             border-left: solid 18rem transparent;
@@ -35,9 +35,9 @@
         }
 
         .fa-solid {
-            color: var(--c-brand-white);
+            color: var(--c-brand-beige);
             font-size: 34rem;
-            opacity: 0.8;
+            opacity: 0.75;
         }
 
         &-title {

@@ -1,0 +1,65 @@
+.education {
+
+    &__container {
+        padding: 20rem 50rem;
+    }
+
+    &__title {
+        font-size: 38rem;
+        font-weight: 400;
+        margin-bottom: 20rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 10rem;
+    }
+
+    &__item {
+        flex: 0 0 calc((100% - 10rem * 2) / 3);
+        background: var(--c-brand-white);
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: stretch;
+        text-align: center;
+        border-radius: 10rem;
+
+        & > * {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:not(.education__item-icon) {
+                padding: 5rem;
+            }
+        }
+
+        &-period {
+            font-size: 26rem;
+            font-weight: 500;
+            color: var(--c-brand-dark-brown);
+        }
+
+        &-name {
+            font-size: 20rem;
+            font-weight: 500;
+        }
+
+        &-icon {
+            display: flex;
+            background: var(--c-brand-beige);
+
+            img {
+                max-width: 30%;
+            }
+        }
+
+        &-place {
+            font-size: 17rem;
+            font-weight: 400;
+        }
+    }
+
+}
