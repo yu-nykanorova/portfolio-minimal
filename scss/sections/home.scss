@@ -1,8 +1,8 @@
 .home {
+    //display: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30rem;
 
     &__welcome {
         padding: 50rem 20rem 50rem 50rem;
@@ -12,9 +12,9 @@
             font-weight: 400;
             margin-bottom: 40rem;
 
-            span {
+            h1 {
                 font-size: 46rem;
-                font-weight: 600;
+                font-weight: 500;
                 color: var(--c-brand-dark-brown);
             }
         }
@@ -51,14 +51,28 @@
     }
 
     &__image {
-        max-width: 300rem;
+        flex: 0 0 40%;
         border-top-right-radius: 10rem;
 	    border-bottom-right-radius: 10rem;
         overflow: hidden;
         display: flex;
+        position: relative;
 
         img {
             object-fit: cover;
+        }
+
+        a {
+            position: absolute;
+            right: 0;
+            top: calc(50% - 32rem);
+            padding: 15rem;
+            background: var(--c-brand-dark-blue);
+
+            .fa-solid {
+                color: var(--c-brand-beige);
+                font-size: 34rem;
+            }
         }
     }
 }

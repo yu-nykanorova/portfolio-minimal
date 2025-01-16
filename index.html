@@ -41,7 +41,7 @@
             <div class="main">
                 <section class="home">
                     <div class="home__welcome">
-                        <h1 class="home__welcome-title">Hi, I'm <span>Yuliia Nykanorova</span></h1>
+                        <div class="home__welcome-title">Hi, I'm <h1>Yuliia Nykanorova</h1></div>
                         <p class="home__welcome-desc">trainee web-developer</p>
                         <div class="home__welcome-buttons">
                             <div class="btn btn-cv">Download CV</div>
@@ -50,11 +50,14 @@
                     </div>
                     <div class="home__image">
                         <img src="img/hero2_cut.JPG" alt="hero">
+                        <a class="home__image-arrow">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
                     </div>
                 </section>
                 <section class="education">
                     <div class="education__container">
-                        <div class="education__title">Education</div>
+                        <div class="chapter_title education__title">Education</div>
                         <div class="education__list">
                             <div class="education__item">
                                 <div class="education__item-period">2018-2020</div>
@@ -66,7 +69,7 @@
                             </div>
                             <div class="education__item">
                                 <div class="education__item-period">2024</div>
-                                <div class="education__item-name">Front-end (HTML/CSS + JS) courses</div>
+                                <div class="education__item-name">Front-end <br> (HTML/CSS + JS) <br> courses</div>
                                 <div class="education__item-icon">
                                     <img src="img/logo_lemon_school.png" alt="logo_lemon_school">
                                 </div>
@@ -75,8 +78,10 @@
                             <div class="education__item">
                                 <div class="education__item-period">2024</div>
                                 <div class="education__item-name">
-                                    1. WEB-developer <br>
-                                    2. JavaScript + Script
+                                    WEB-developer <br>
+                                    & <br>
+                                    JavaScript + React <br>
+                                    courses
                                 </div>
                                 <div class="education__item-icon">
                                     <img src="img/logo_udemy.png" alt="logo_udemy">
@@ -87,60 +92,70 @@
                     </div>
                 </section>
                 <section class="skills">
-                    <div class="skills__title">Skills</div>
-                    <div class="skills__list">
-                        <div class="skills__item">
-                            <div class="skills__item-image">
-                                <img src="img/skills/html.png" alt="HTML">
-                            </div>
-                            <div class="skills__item-name">HTML</div>
+                    <div class="chapter_title skills__title">Skills</div>
+                    <div class="skills__slider">
+                        <div class="skills__slider-button skills__slider-button-prev">
+                            <i class="fa-solid fa-chevron-left"></i>
                         </div>
-                        <div class="skills__item">
-                            <div class="skills__item-image">
-                                <img src="img/skills/css.png" alt="CSS">
+                        <div class="skills__slider-wrapper">
+                            <div class="skills__list">
+                                <div class="skills__item">
+                                    <div class="skills__item-image">
+                                        <img src="img/skills/html.png" alt="HTML">
+                                    </div>
+                                    <div class="skills__item-name">HTML</div>
+                                </div>
+                                <div class="skills__item">
+                                    <div class="skills__item-image">
+                                        <img src="img/skills/css.png" alt="CSS">
+                                    </div>
+                                    <div class="skills__item-name">CSS</div>
+                                </div>
+                                <div class="skills__item">
+                                    <div class="skills__item-image">
+                                        <img src="img/skills/js.png" alt="JS">
+                                    </div>
+                                    <div class="skills__item-name">JavaScript</div>
+                                </div>
+                                <div class="skills__item">
+                                    <div class="skills__item-image">
+                                        <img src="img/skills/sass.png" alt="Sass SCSS">
+                                    </div>
+                                    <div class="skills__item-name">Sass/SCSS</div>
+                                </div>
+                                <div class="skills__item">
+                                    <div class="skills__item-image">
+                                        <img src="img/skills/gulp.png" alt="gulp">
+                                    </div>
+                                    <div class="skills__item-name">Gulp</div>
+                                </div>
+                                <div class="skills__item">
+                                    <div class="skills__item-image">
+                                        <img src="img/skills/react.png" alt="React">
+                                    </div>
+                                    <div class="skills__item-name">React</div>
+                                </div>
+                                <div class="skills__item">
+                                    <div class="skills__item-image">
+                                        <img src="img/skills/github.png" alt="GitHub">
+                                    </div>
+                                    <div class="skills__item-name">GitHub</div>
+                                </div>
+                                <div class="skills__item">
+                                    <div class="skills__item-image">
+                                        <img src="img/skills/figma.png" alt="Figma">
+                                    </div>
+                                    <div class="skills__item-name">Figma</div>
+                                </div>
                             </div>
-                            <div class="skills__item-name">CSS</div>
                         </div>
-                        <div class="skills__item">
-                            <div class="skills__item-image">
-                                <img src="img/skills/js.png" alt="JS">
-                            </div>
-                            <div class="skills__item-name">JavaScript</div>
-                        </div>
-                        <div class="skills__item">
-                            <div class="skills__item-image">
-                                <img src="img/skills/sass.png" alt="Sass SCSS">
-                            </div>
-                            <div class="skills__item-name">Sass/SCSS</div>
-                        </div>
-                        <div class="skills__item">
-                            <div class="skills__item-image">
-                                <img src="img/skills/gulp.png" alt="gulp">
-                            </div>
-                            <div class="skills__item-name">Gulp</div>
-                        </div>
-                        <div class="skills__item">
-                            <div class="skills__item-image">
-                                <img src="img/skills/react.png" alt="React">
-                            </div>
-                            <div class="skills__item-name">React</div>
-                        </div>
-                        <div class="skills__item">
-                            <div class="skills__item-image">
-                                <img src="img/skills/github.png" alt="GitHub">
-                            </div>
-                            <div class="skills__item-name">GitHub</div>
-                        </div>
-                        <div class="skills__item">
-                            <div class="skills__item-image">
-                                <img src="img/skills/figma.png" alt="Figma">
-                            </div>
-                            <div class="skills__item-name">Figma</div>
+                        <div class="skills__slider-button skills__slider-button-next">
+                            <i class="fa-solid fa-chevron-right"></i>
                         </div>
                     </div>
                 </section>
                 <section class="projects">
-                    <div class="projects__title">Some works I made recently</div>
+                    <div class="chapter_title projects__title">Some works I made recently</div>
                     <p class="projects__desc">Some text</p>
                     <div class="projects__list">
                         <div class="projects__item">
@@ -200,8 +215,11 @@
                     </div>
                     <div class="btn projects__btn-more">More...</div>
                 </section>
-                <section class="Contacts">
-
+                <section class="contacts">
+                    <div class="chapter_title contacts__title">Contact Me</div>
+                    <input type="text" class="contacts__input-name">
+                    <input type="email" class="contacts__input-email">
+                    <textarea class="contacts__textarea"></textarea>
                 </section>
             </div>
             <footer class="footer">All rights reserved</footer>
