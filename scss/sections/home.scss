@@ -1,12 +1,15 @@
 .home {
     display: none;
-    //display: flex;
     justify-content: space-between;
     align-items: center;
 
+    &.show-tab {
+        display: flex;
+    }
+
     &__welcome {
         padding: 50rem 20rem 50rem 50rem;
-
+        
         &-title {
             font-size: 44rem;
             font-weight: 400;
@@ -34,7 +37,7 @@
 
             .btn-cv, .btn-contact {
                 padding: 12rem 14rem;
-                width: 200rem;
+                max-width: 200rem;
                 font-weight: 400;
             }
 
@@ -43,7 +46,7 @@
             }
 
             .btn-contact {
-                background: var(--c-brand-beige);
+                background: var(--c-brand-light-blue);
                 color: var(--c-brand-dark-brown);
                 font-weight: 500;
             }
@@ -51,7 +54,7 @@
     }
 
     &__image {
-        flex: 0 0 40%;
+        flex-basis: 40%;
         border-top-right-radius: 10rem;
 	    border-bottom-right-radius: 10rem;
         overflow: hidden;
@@ -67,11 +70,16 @@
             right: 0;
             top: calc(50% - 32rem);
             padding: 15rem;
-            background: var(--c-brand-dark-blue);
+            background: var(--c-brand-dark-blue-half-transp);
 
             .fa-solid {
-                color: var(--c-brand-beige);
+                color: var(--c-brand-white-half-transp);
                 font-size: 34rem;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: var(--c-brand-white);
+                }
             }
         }
     }

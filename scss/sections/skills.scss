@@ -1,19 +1,53 @@
 .skills {
-    padding: 50rem;
-    //display: none;
-    display: block;
+    display: none;
+    padding: 80rem 50rem 100rem;
 
     &__carousel {
         overflow: hidden;
         width: 100%;
         padding-inline: 35rem;
+        position: relative;
+        z-index: 1;
+
+        &-btn-prev, &-btn-next {
+            position: absolute;
+            top: 50%;
+            padding: 5rem;
+            transform: translateY(-50%);
+            background: var(--c-brand-dark-brown-half-transp);
+            width: 36rem;
+            height: 44rem;
+            border-radius: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 2;
+
+            .fa-solid {
+                color: var(--c-brand-white-half-transp);
+                font-size: 30rem;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: var(--c-brand-white);
+                }
+            }
+        }
+
+        &-btn-prev {
+            left: 10rem;
+        }
+
+        &-btn-next {
+            right: 10rem;
+        }        
     }
 
 	&__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
     }
 
 	&__item {
@@ -23,7 +57,7 @@
         justify-content: center;
         align-items: center;
         gap: 10rem;
-        background: var(--c-brand-white);
+        background: var(--c-brand-white-half-transp);
         border-radius: 8rem;
 
         &-image {
@@ -37,39 +71,22 @@
 
 	    &-name {
             padding: 8rem;
-            background: var(--c-brand-dark-brown);
-            color: var(--c-brand-white);
+            background: var(--c-brand-light-blue);
+            color: var(--c-brand-dark-brown);
             align-self: stretch;
             text-align: center;
             border-radius: 0 0 10rem 10rem;
-            font-size: 14rem;
-            font-weight: 300;
+            font-size: 18rem;
+            font-weight: 500;
         }
     }
 }
 
-.owl-nav {
-    width: 100%;
-    height: 60rem;
-    display: flex;
-    justify-content: space-between;
-    line-height: 100%;
-    position: absolute;
-    top: calc(50% - 44rem);
+.owl-item {
+    
+    border-radius: 8rem;
+}
 
-    .owl-prev, .owl-next {
-        height: 100%;
-    }
-
-    .owl-prev span, .owl-next span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 44rem;
-        width: 30rem;
-        font-size: 50rem;
-        line-height: 100%;
-        color: var(--c-brand-dark-blue);
-        background: var(--c-brand-white-half-transp);
-    }
+.owl-stage-outer {
+    border-radius: 8rem;
 }

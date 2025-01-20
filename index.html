@@ -18,7 +18,7 @@
             </a>
             <div class="navbar">
                 <div class="navbar__list">
-                    <a class="navbar__item">
+                    <a class="navbar__item is-active">
                         <i class="fa-solid fa-house-user"></i>
                         <p class="navbar__item-title">Home</p>
                     </a>
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="main">
-                <section class="home">
+                <section id="home" class="tab-item home">
                     <div class="home__welcome">
                         <div class="home__welcome-title">Hi, I'm <h1>Yuliia Nykanorova</h1></div>
                         <p class="home__welcome-desc">trainee web-developer</p>
@@ -57,27 +57,36 @@
                         </a>
                     </div>
                 </section>
-                <section class="education">
+                <section id="education" class="tab-item education">
                     <div class="education__container">
                         <div class="chapter_title education__title">Education</div>
                         <div class="education__list">
                             <div class="education__item">
+                                <div class="education__item-icon">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                </div>
                                 <div class="education__item-period">2018-2020</div>
                                 <div class="education__item-name">Bachelor degree of computer science</div>
-                                <div class="education__item-icon">
+                                <div class="education__item-logo">
                                     <img src="img/logo_kpi.png" alt="logo_kpi">
                                 </div>
                                 <div class="education__item-place">National Technical University of Ukraine "Igor Sikorsky Kyiv Polytechnic Institute"</div>
                             </div>
                             <div class="education__item">
+                                <div class="education__item-icon">
+                                    <i class="fa-solid fa-people-group"></i>
+                                </div>
                                 <div class="education__item-period">2024</div>
                                 <div class="education__item-name">Front-end <br> (HTML/CSS + JS) <br> courses</div>
-                                <div class="education__item-icon">
+                                <div class="education__item-logo">
                                     <img src="img/logo_lemon_school.png" alt="logo_lemon_school">
                                 </div>
                                 <div class="education__item-place">Lemon School</div>
                             </div>
                             <div class="education__item">
+                                <div class="education__item-icon">
+                                    <i class="fa-solid fa-laptop"></i>
+                                </div>
                                 <div class="education__item-period">2024</div>
                                 <div class="education__item-name">
                                     WEB-developer <br>
@@ -85,7 +94,7 @@
                                     JavaScript + React <br>
                                     courses
                                 </div>
-                                <div class="education__item-icon">
+                                <div class="education__item-logo">
                                     <img src="img/logo_udemy.png" alt="logo_udemy">
                                 </div>
                                 <div class="education__item-place">Udemy</div>
@@ -93,9 +102,12 @@
                         </div>
                     </div>
                 </section>
-                <section class="skills">
+                <section id="skills" class="tab-item skills">
                     <div class="chapter_title skills__title">Skills</div>
                     <div class="skills__carousel">
+                        <button class="skills__carousel-btn-prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
                         <div class="owl-carousel skills__list">
                             <div class="skills__item">
                                 <div class="skills__item-image">
@@ -146,9 +158,12 @@
                                 <div class="skills__item-name">Figma</div>
                             </div>
                         </div>
+                        <button class="skills__carousel-btn-next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
                 </section>
-                <section class="projects">
+                <section id="projects" class="tab-item projects">
                     <div class="chapter_title projects__title">Some works I made recently</div>
                     <p class="projects__desc">Some text</p>
                     <div class="projects__list">
@@ -157,8 +172,13 @@
                                 <img src="img/projects/coffee.jpg" alt="">
                             </div>
                             <div class="projects__item-info">
-                                <div class="projects__item-title">Project name</div>
-                                <p class="projects__item-detail">Details...</p>
+                                <div class="projects__item-info-text">
+                                    <div class="projects__item-title">Project name</div>
+                                    <p class="projects__item-detail">Click for more details...</p>
+                                </div>
+                                <div class="projects__item-info-arrow">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="projects__item">
@@ -166,8 +186,13 @@
                                 <img src="img/projects/diagnostic_center.jpg" alt="diagnostic center">
                             </div>
                             <div class="projects__item-info">
-                                <div class="projects__item-title">Project name</div>
-                                <p class="projects__item-detail">Details...</p>
+                                <div class="projects__item-info-text">
+                                    <div class="projects__item-title">Project name</div>
+                                    <p class="projects__item-detail">Click for more details...</p>
+                                </div>
+                                <div class="projects__item-info-arrow">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="projects__item">
@@ -175,8 +200,13 @@
                                 <img src="img/projects/enver.jpg" alt="enver">
                             </div>
                             <div class="projects__item-info">
-                                <div class="projects__item-title">Project name</div>
-                                <p class="projects__item-detail">Details...</p>
+                                <div class="projects__item-info-text">
+                                    <div class="projects__item-title">Project name</div>
+                                    <p class="projects__item-detail">Click for more details...</p>
+                                </div>
+                                <div class="projects__item-info-arrow">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="projects__item">
@@ -184,8 +214,13 @@
                                 <img src="img/projects/fashion_shop.jpg" alt="fashion shop">
                             </div>
                             <div class="projects__item-info">
-                                <div class="projects__item-title">Project name</div>
-                                <p class="projects__item-detail">Details...</p>
+                                <div class="projects__item-info-text">
+                                    <div class="projects__item-title">Project name</div>
+                                    <p class="projects__item-detail">Click for more details...</p>
+                                </div>
+                                <div class="projects__item-info-arrow">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="projects__item">
@@ -193,8 +228,13 @@
                                 <img src="img/projects/movie.jpg" alt="movie">
                             </div>
                             <div class="projects__item-info">
-                                <div class="projects__item-title">Project name</div>
-                                <p class="projects__item-detail">Details...</p>
+                                <div class="projects__item-info-text">
+                                    <div class="projects__item-title">Project name</div>
+                                    <p class="projects__item-detail">Click for more details...</p>
+                                </div>
+                                <div class="projects__item-info-arrow">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="projects__item">
@@ -202,14 +242,19 @@
                                 <img src="img/projects/plant_shop.jpg" alt="plant shop">
                             </div>
                             <div class="projects__item-info">
-                                <div class="projects__item-title">Project name</div>
-                                <p class="projects__item-detail">Details...</p>
+                                <div class="projects__item-info-text">
+                                    <div class="projects__item-title">Project name</div>
+                                    <p class="projects__item-detail">Click for more details...</p>
+                                </div>
+                                <div class="projects__item-info-arrow">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="btn projects__btn-more">More...</div>
                 </section>
-                <section class="contacts">
+                <section id="contacts" class="tab-item contacts">
                     <div class="chapter_title contacts__title">Contact Me</div>
                     <input type="text" class="contacts__input-name">
                     <input type="email" class="contacts__input-email">

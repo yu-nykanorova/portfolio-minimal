@@ -34,10 +34,17 @@
             border-right: solid 18rem transparent;
         }
 
+        &.is-active .fa-solid {
+            color: var(--c-brand-white);
+        }
+
+        &.is-active::after {
+            border-bottom-color: var(--c-brand-white);
+        }
+
         .fa-solid {
-            color: var(--c-brand-beige);
+            color: var(--c-brand-white-half-transp);
             font-size: 34rem;
-            opacity: 0.75;
         }
 
         &-title {
