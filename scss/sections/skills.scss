@@ -1,9 +1,13 @@
 .skills {
-    display: none;
-    padding: 80rem 50rem 100rem;
+    padding: 50rem 50rem 80rem;
+
+    &__container {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+    }
 
     &__carousel {
-        overflow: hidden;
         width: 100%;
         padding-inline: 35rem;
         position: relative;

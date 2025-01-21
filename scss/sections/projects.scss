@@ -1,6 +1,10 @@
 .projects {
-    display: none;
-    padding: 20rem 50rem;
+    padding: 50rem;
+
+    &__container {
+        display: block;
+        width: 100%;
+    }
 
 	&__desc {
         margin-bottom: 10rem;

@@ -16,6 +16,24 @@ body {
 	justify-content: center;
 }
 
+a {
+	color: var(--c-white);
+}
+
+li {
+	list-style-type: none;
+}
+
+input, textarea {
+	border: 0;
+	outline: 0;
+}
+
+button {
+	border: 0;
+	outline: 0;
+}
+
 .container {
 	width: 100%;
 	min-height: 100%;
@@ -81,7 +99,7 @@ body {
 	border-radius: 8rem;
 }
 
-.chapter_title {
+.chapter-title {
 	font-size: 38rem;
 	font-weight: 400;
 	margin-bottom: 20rem;

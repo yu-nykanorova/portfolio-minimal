@@ -34,14 +34,6 @@
             border-right: solid 18rem transparent;
         }
 
-        &.is-active .fa-solid {
-            color: var(--c-brand-white);
-        }
-
-        &.is-active::after {
-            border-bottom-color: var(--c-brand-white);
-        }
-
         .fa-solid {
             color: var(--c-brand-white-half-transp);
             font-size: 34rem;
@@ -53,6 +45,14 @@
             color: var(--c-white);
             opacity: 0;
             transition: var(--transition);
+        }
+
+        &.is-active .fa-solid {
+            color: var(--c-brand-white);
+        }
+
+        &.is-active::after {
+            border-bottom-color: var(--c-brand-white);
         }
     }
 }

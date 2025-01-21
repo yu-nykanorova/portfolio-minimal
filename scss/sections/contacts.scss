@@ -1,3 +1,44 @@
 .contacts {
-    display: none;
+    padding: 50rem;
+
+    &__container {
+        width: 100%;
+    }
+
+    &__title {}
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: calc(65% - 20rem);
+
+        &-input-name {}
+
+        &-input-email {}
+
+        &-textarea {
+            resize: vertical;
+            max-height: 350rem;
+        }
+
+        &-btn {}
+    }
+
+    &__data {
+
+        &-item {}
+
+        &-map {
+            display: flex;
+
+        }
+    }
 }

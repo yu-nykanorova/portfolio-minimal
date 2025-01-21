@@ -1,6 +1,6 @@
 // owl-carousel;
 
-$(document).ready(function() {
+$(document).ready(() => {
     const owl = $(".owl-carousel").owlCarousel({
         loop: true, 
         margin: 10, 
@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function showTabContent(i = 0) {
+    function showTabContent(i = 4) {
         tabsContent[i].classList.add("show-tab");
         tabsContent[i].classList.remove("hide-tab");
         tabs[i].classList.add("is-active");
@@ -52,12 +52,15 @@ window.addEventListener("DOMContentLoaded", () => {
     showTabContent();
 
     tabsParent.addEventListener("click", e => {
-        tabs.forEach((item, i) => {
-            if (e.target == item) {
-                hideTabContent();
-                showTabContent(i);
-            }
-        });
+        const target = e.target.closest(".navbar__item");
+        if (target && target.classList.contains("navbar__item")) {
+            tabs.forEach((item, i) => {
+                if (target == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            });
+        }
     });
 
 });

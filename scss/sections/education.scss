@@ -1,8 +1,9 @@
 .education {
-    display: none;
+    padding: 50rem;
 
     &__container {
-        padding: 50rem;
+        display: block;
+        width: 100%;
     }
 
     &__list {
