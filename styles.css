@@ -53,6 +53,7 @@ li {
   --transition: .2s all ease-in-out;
   --c-white: #fff;
   --c-black: #000;
+  --c-gray-half-transp: rgba(148, 148, 148, 0.7);
   --c-brand-white: rgb(254, 246, 243);
   --c-brand-white-half-transp: rgba(252, 250, 248, 0.7);
   --c-brand-light-blue: #c2f3e7;
@@ -252,6 +253,9 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%; }
   .home__welcome {
     padding: 50rem 20rem 50rem 50rem; }
@@ -581,16 +585,8 @@ button {
   .contacts__container {
     width: 100%; }
   .contacts__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    gap: 20rem; }
+    display: block;
+    position: relative; }
   .contacts__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -602,16 +598,125 @@ button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-flex: calc(65% - 20rem);
-        -ms-flex: calc(65% - 20rem);
-            flex: calc(65% - 20rem); }
+    gap: 20rem;
+    width: 60%;
+    padding: 50rem 60rem 50rem 40rem;
+    background: var(--c-brand-light-blue);
+    border-radius: 8rem;
+    -webkit-box-shadow: 0 0 5rem 1rem var(--c-gray-half-transp);
+            box-shadow: 0 0 5rem 1rem var(--c-gray-half-transp); }
+    .contacts__form input, .contacts__form textarea {
+      background: var(--c-brand-white-half-transp);
+      border-radius: 4rem;
+      padding: 5rem 8rem;
+      font-size: 16rem;
+      color: var(--c-brand-dark-blue); }
+      .contacts__form input:focus, .contacts__form textarea:focus {
+        -webkit-box-shadow: 0 0 5rem 1rem var(--c-brand-dark-brown-half-transp);
+                box-shadow: 0 0 5rem 1rem var(--c-brand-dark-brown-half-transp); }
+      .contacts__form input::-webkit-input-placeholder, .contacts__form textarea::-webkit-input-placeholder {
+        font-size: 14rem;
+        color: var(--c-brand-dark-brown-half-transp); }
+      .contacts__form input:-ms-input-placeholder, .contacts__form textarea:-ms-input-placeholder {
+        font-size: 14rem;
+        color: var(--c-brand-dark-brown-half-transp); }
+      .contacts__form input::-ms-input-placeholder, .contacts__form textarea::-ms-input-placeholder {
+        font-size: 14rem;
+        color: var(--c-brand-dark-brown-half-transp); }
+      .contacts__form input::placeholder, .contacts__form textarea::placeholder {
+        font-size: 14rem;
+        color: var(--c-brand-dark-brown-half-transp); }
     .contacts__form-textarea {
       resize: vertical;
+      min-height: 150rem;
       max-height: 350rem; }
-  .contacts__data-map {
+    .contacts__form-btn {
+      padding: 12rem;
+      background: var(--c-brand-dark-blue);
+      color: var(--c-brand-white);
+      font-size: 18rem;
+      letter-spacing: 120%; }
+  .contacts__data {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 15rem; }
+    .contacts__data-contact-container {
+      display: grid;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10rem; }
+    .contacts__data-socials-container {
+      display: grid;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10rem; }
+    .contacts__data-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      gap: 10rem;
+      text-align: center;
+      background: var(--c-brand-white-half-transp);
+      padding: 8rem;
+      -webkit-box-shadow: 0 0 6rem 1rem var(--c-gray-half-transp);
+              box-shadow: 0 0 6rem 1rem var(--c-gray-half-transp);
+      border-radius: 4rem;
+      font-size: 16rem;
+      color: var(--c-brand-dark-blue);
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      .contacts__data-item .fa-solid, .contacts__data-item .fa-brands {
+        font-size: 20rem;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+      .contacts__data-item:hover {
+        background: var(--c-brand-dark-blue-half-transp);
+        color: var(--c-brand-light-blue); }
+        .contacts__data-item:hover .fa-solid, .contacts__data-item:hover .fa-brands {
+          color: var(--c-brand-light-blue); }
+    .contacts__data-map-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border-radius: 4rem;
+      -webkit-box-shadow: 0 0 5rem 1rem var(--c-gray-half-transp);
+              box-shadow: 0 0 5rem 1rem var(--c-gray-half-transp); }
+      .contacts__data-map-container iframe {
+        border-radius: 8rem; }
 
 @font-face {
   font-family: "Poppins";
