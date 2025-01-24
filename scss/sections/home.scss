@@ -10,6 +10,7 @@
 
     &__welcome {
         padding: 50rem 20rem 50rem 50rem;
+        align-content: center;
         
         &-title {
             font-size: 44rem;
@@ -37,6 +38,7 @@
             letter-spacing: 1rem;
 
             .btn-cv, .btn-contact {
+                flex: 0 0 calc((100% - 20rem) / 2);
                 padding: 12rem 14rem;
                 max-width: 200rem;
                 font-weight: 400;
@@ -44,11 +46,30 @@
 
             .btn-cv {
                 background: var(--c-brand-dark-blue);
+
+                &-text {
+                    display: inline;
+                }
+
+                &-download-eng, &-download-ukr {
+                    display: none;
+                    white-space: pre;
+                }
+
+                &.active-text {
+                    .btn-cv-text {
+                        display: none;
+                    }
+
+                    .btn-cv-download-eng, .btn-cv-download-ukr {
+                        display: inline;
+                    }
+                }
             }
 
             .btn-contact {
                 background: var(--c-brand-light-blue);
-                color: var(--c-brand-dark-brown);
+                color: var(--c-brand-dark-blue);
                 font-weight: 500;
             }
         }
@@ -66,12 +87,14 @@
             object-fit: cover;
         }
 
-        a {
+        &-arrow {
             position: absolute;
             right: 0;
             top: calc(50% - 32rem);
             padding: 15rem;
             background: var(--c-brand-dark-blue-half-transp);
+            border-radius: 4rem 0 0 4rem;
+            cursor: pointer;
 
             .fa-solid {
                 color: var(--c-brand-white-half-transp);

@@ -41,21 +41,26 @@
                 </div>
             </div>
             <div class="main">
+                <div class="main__top-line"></div>
                 <section id="home" class="tab-item home">
                     <div class="home__container">
                         <div class="home__welcome">
                             <div class="home__welcome-title">Hi, I'm <h1>Yuliia Nykanorova</h1></div>
                             <p class="home__welcome-desc">trainee web-developer</p>
                             <div class="home__welcome-buttons">
-                                <div class="btn btn-cv">Download CV</div>
+                                <div class="btn btn-cv">
+                                    <div class="btn-cv-text">Download CV</div>
+                                    <a href="files/CV Nykanorova eng.pdf" class="btn-cv-download-eng">ENG | </a>
+                                    <a href="files/CV Nykanorova ukr.pdf" class="btn-cv-download-ukr">UKR</a>
+                                </div>
                                 <div class="btn btn-contact">Contact me</div>
                             </div>
                         </div>
                         <div class="home__image">
                             <img src="img/hero2_cut.JPG" alt="hero">
-                            <a class="home__image-arrow">
+                            <div class="home__image-arrow">
                                 <i class="fa-solid fa-chevron-right"></i>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -126,21 +131,21 @@
                                 </div>
                                 <div class="skills__item">
                                     <div class="skills__item-image">
-                                        <img src="img/skills/js.png" alt="JS">
-                                    </div>
-                                    <div class="skills__item-name">JavaScript</div>
-                                </div>
-                                <div class="skills__item">
-                                    <div class="skills__item-image">
                                         <img src="img/skills/sass.png" alt="Sass SCSS">
                                     </div>
                                     <div class="skills__item-name">Sass/SCSS</div>
                                 </div>
                                 <div class="skills__item">
                                     <div class="skills__item-image">
-                                        <img src="img/skills/gulp.png" alt="gulp">
+                                        <img src="img/skills/tailwind-css.png" alt="tailwindcss">
                                     </div>
-                                    <div class="skills__item-name">Gulp</div>
+                                    <div class="skills__item-name">Tailwindcss</div>
+                                </div>
+                                <div class="skills__item">
+                                    <div class="skills__item-image">
+                                        <img src="img/skills/js.png" alt="JS">
+                                    </div>
+                                    <div class="skills__item-name">JavaScript</div>
                                 </div>
                                 <div class="skills__item">
                                     <div class="skills__item-image">
@@ -159,6 +164,12 @@
                                         <img src="img/skills/figma.png" alt="Figma">
                                     </div>
                                     <div class="skills__item-name">Figma</div>
+                                </div>
+                                <div class="skills__item">
+                                    <div class="skills__item-image">
+                                        <img src="img/skills/gulp.png" alt="gulp">
+                                    </div>
+                                    <div class="skills__item-name">Gulp</div>
                                 </div>
                             </div>
                             <button class="skills__carousel-btn-next">
@@ -309,7 +320,19 @@
                     </div>
                 </section>
             </div>
-            <footer class="footer">All rights reserved</footer>
+            <footer class="footer">
+                <div class="footer__copyright"></div>
+            </footer>
+            <div class="modal">
+                <div class="modal__content">
+                    <div class="modal__content-close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="modal__content-project-image"></div>
+                    <div class="modal__content-project-title"></div>
+                    <div class="modal__content-project-details"></div>
+                </div>
+            </div>
         </div>
     </div>
     

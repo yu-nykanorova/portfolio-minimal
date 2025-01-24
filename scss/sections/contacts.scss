@@ -29,6 +29,7 @@
             padding: 5rem 8rem;
             font-size: 16rem;
             color: var(--c-brand-dark-blue);
+            box-shadow: inset 1rem 1rem var(--c-gray-half-transp), inset -1rem -1rem var(--c-gray-half-transp);
 
             &:focus {
                 box-shadow: 0 0 5rem 1rem var(--c-brand-dark-brown-half-transp);
@@ -56,6 +57,8 @@
             color: var(--c-brand-white);
             font-size: 18rem;
             letter-spacing: 120%;
+            max-width: 300rem;
+            margin-inline: auto;
         }
     }
 
@@ -117,11 +120,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            border: 1rem solid var(--c-brand-dark-blue-half-transp);
             border-radius: 4rem;
             box-shadow: 0 0 5rem 1rem var(--c-gray-half-transp);
             
             iframe {
-                border-radius: 8rem;
+                border-radius: 4rem;
             }
         }
     }
