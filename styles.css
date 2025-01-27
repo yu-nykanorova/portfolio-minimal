@@ -560,8 +560,6 @@ button {
               transform: scale(1.01);
       -webkit-box-shadow: 0 0 3rem 1rem rgba(252, 250, 248, 0.4);
               box-shadow: 0 0 3rem 1rem rgba(252, 250, 248, 0.4); }
-      .projects__item:hover .projects__item-info {
-        opacity: 1; }
     .projects__item-image {
       border-radius: 8rem; }
       .projects__item-image img {
@@ -578,13 +576,12 @@ button {
               align-items: center;
       position: absolute;
       width: 100%;
-      height: 30%;
+      height: 35%;
       bottom: 0;
       background: var(--c-brand-dark-brown-half-transp);
       border-radius: 0 0 8rem 8rem;
       padding: 10rem 8rem;
       color: var(--c-brand-light-blue);
-      opacity: 0;
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
       .projects__item-info-text {
@@ -613,11 +610,11 @@ button {
         .projects__item-info-arrow .fa-solid {
           font-size: 26rem; }
     .projects__item-title {
-      font-size: 20rem;
-      font-weight: 500;
+      font-size: 18rem;
+      font-weight: 400;
       color: var(--c-brand-white); }
     .projects__item-more {
-      font-size: 16rem;
+      font-size: 14rem;
       font-weight: 300;
       letter-spacing: 130%; }
     .projects__item-detail, .projects__item-link, .projects__item-repository {
@@ -626,7 +623,7 @@ button {
     padding: 12rem 23rem;
     width: 200rem;
     margin-inline: auto;
-    background: var(--c-brand-dark-brown);
+    background: var(--c-brand-dark-blue);
     color: var(--c-brand-white); }
 
 .contacts {
@@ -771,6 +768,84 @@ button {
               box-shadow: 0 0 5rem 1rem var(--c-gray-half-transp); }
       .contacts__data-map-container iframe {
         border-radius: 4rem; }
+
+.modal {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15%;
+  overflow: auto; }
+  .modal__content {
+    background: var(--c-brand-white-half-transp);
+    border-radius: 10rem;
+    position: relative; }
+    .modal__content-close-btn {
+      position: absolute;
+      top: 5rem;
+      right: 5rem;
+      background: var(--c-brand-dark-brown-half-transp);
+      padding: 5rem;
+      border-radius: 4rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .modal__content-close-btn .fa-solid {
+        color: var(--c-brand-white-half-transp);
+        font-size: 34rem;
+        -webkit-transition: color 0.3s ease;
+        transition: color 0.3s ease; }
+        .modal__content-close-btn .fa-solid:hover {
+          color: var(--c-brand-white); }
+    .modal__content-project-data {
+      border-radius: 10rem;
+      text-align: center; }
+      .modal__content-project-data a {
+        display: block;
+        color: var(--c-brand-dark-brown);
+        font-size: 14rem;
+        font-weight: 500; }
+    .modal__content-project-image {
+      border-radius: 10rem;
+      padding: 50rem 50rem 0 50rem; }
+      .modal__content-project-image img {
+        border-radius: 10rem; }
+    .modal__content-project-title {
+      margin: 15rem 10rem 8rem 10rem;
+      color: var(--c-brand-dark-brown);
+      font-size: 26rem;
+      font-weight: 600; }
+    .modal__content-project-techniques {
+      margin-inline: 0;
+      margin-bottom: 8rem;
+      padding: 2rem 0;
+      color: var(--c-brand-white);
+      font-size: 18rem;
+      background: var(--c-brand-dark-brown-half-transp); }
+    .modal__content-project-link {
+      margin-bottom: 5rem; }
+    .modal__content-project-repository {
+      margin-bottom: 15rem; }
+  .modal.open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 @font-face {
   font-family: "Poppins";
