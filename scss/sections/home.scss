@@ -17,10 +17,18 @@
             font-weight: 400;
             margin-bottom: 40rem;
 
+            @include desktop-small {
+                font-size: 38rem;            
+            }
+
             h1 {
                 font-size: 46rem;
                 font-weight: 500;
                 color: var(--c-brand-dark-brown);
+
+                @include desktop-small {
+                    font-size: 38rem;            
+                }
             }
         }
 
@@ -41,7 +49,6 @@
                 flex: 0 0 calc((100% - 20rem) / 2);
                 padding: 12rem 14rem;
                 max-width: 200rem;
-                font-weight: 400;
             }
 
             .btn-cv {
@@ -65,12 +72,20 @@
                         display: inline;
                     }
                 }
+
+                &:hover {
+                    box-shadow: 1rem 1rem 2rem 1rem var(--c-brand-light-blue);
+                }
             }
 
             .btn-contact {
                 background: var(--c-brand-light-blue);
                 color: var(--c-brand-dark-blue);
                 font-weight: 500;
+
+                &:hover {
+                    box-shadow: 1rem 1rem 2rem 1rem var(--c-brand-dark-blue-half-transp);
+                }
             }
         }
     }
@@ -95,13 +110,17 @@
             background: var(--c-brand-dark-blue-half-transp);
             border-radius: 4rem 0 0 4rem;
             cursor: pointer;
+            transition: all 0.3s ease;
 
             .fa-solid {
                 color: var(--c-brand-white-half-transp);
                 font-size: 34rem;
                 transition: color 0.3s ease;
+            }
 
-                &:hover {
+            &:hover {
+                box-shadow: 0 0 2rem 1rem var(--c-brand-white);
+                .fa-solid {
                     color: var(--c-brand-white);
                 }
             }

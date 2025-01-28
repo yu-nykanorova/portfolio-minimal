@@ -27,14 +27,18 @@
             align-items: center;
             cursor: pointer;
             z-index: 2;
+            transition: all 0.3s ease;
 
             .fa-solid {
                 color: var(--c-brand-white-half-transp);
                 font-size: 30rem;
                 transition: color 0.3s ease;
+            }
 
-                &:hover {
-                    color: var(--c-brand-white);
+            &:hover {
+                box-shadow: 0 0 5rem 1rem var(--c-brand-light-blue);
+                .fa-solid {
+                    color: var(--c-brand-light-blue);
                 }
             }
         }

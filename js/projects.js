@@ -65,40 +65,69 @@ window.addEventListener("DOMContentLoaded", () => {
     const projectsList = document.querySelector(".projects__list");
     const modal = document.querySelector(".modal");
     const modalContent = document.querySelector(".modal__content");
+    const moreProjectsButton = document.querySelector(".projects__btn-more");
 
+    // function to create project card
 
+    function createProjectCard (id, img, alt, title) {
+        const projectCard = document.createElement("div");
+
+        projectCard.classList.add("projects__item");
+        projectCard.dataset.id = id;
+
+        projectCard.innerHTML = `
+            <div class="projects__item-image">
+                <img src=${img} alt=${alt}>
+            </div>
+            <div class="projects__item-info">
+                <div class="projects__item-info-text">
+                    <div class="projects__item-title">${title}</div>
+                    <p class="projects__item-more">Click for more details...</p>
+                </div>
+                <div class="projects__item-info-arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        `;
+
+        projectsList.append(projectCard);
+    }
+    
     // function to display projects list
 
-    function createProjectCard(data) {
-        data.forEach(({ id, img, altImg, title }) => {
-            const projectCard = document.createElement("div");
-            projectCard.classList.add("projects__item");
-            projectCard.dataset.id = id;
-    
-            projectCard.innerHTML = `
-                <div class="projects__item-image">
-                    <img src=${img} alt=${altImg}>
-                </div>
-                <div class="projects__item-info">
-                    <div class="projects__item-info-text">
-                        <div class="projects__item-title">${title}</div>
-                        <p class="projects__item-more">Click for more details...</p>
-                    </div>
-                    <div class="projects__item-info-arrow">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
-            `;
-    
-            projectsList.append(projectCard);
+    let allProjectsShown = false;
+
+    function showProjects(data, startFrom, itemsAmount, clearList = false) {
+        if (clearList) {
+            projectsList.innerHTML = "";
+        }
+
+        data.slice(startFrom, itemsAmount).forEach(({ id, img, altImg, title }) => {
+            createProjectCard(id, img, altImg, title);
         });
     }
 
-    createProjectCard(projects);
+    // displaying projects
+
+    const projectsToShow = 4;
+    showProjects(projects, 0, projectsToShow, true);
+
+    moreProjectsButton.addEventListener("click", () => {
+
+        if (allProjectsShown) {
+            showProjects(projects, 0, projectsToShow, true);
+            moreProjectsButton.textContent = "Show more...";
+        } else {
+            showProjects(projects, projectsToShow, projects.length);
+            moreProjectsButton.textContent = "Hide";
+        }
+
+        allProjectsShown = !allProjectsShown;
+    });
 
     // functions to display/hide project details in modal window
 
-    function displayProjectDetails(item) {
+    function showProjectDetails(item) {
         modalContent.innerHTML = `
             <div class="modal__content-close-btn">
                 <i class="fa-solid fa-xmark"></i>
@@ -135,7 +164,7 @@ window.addEventListener("DOMContentLoaded", () => {
             const project = projects.find((item) => item.id === projectId);
 
             if (project) {
-                displayProjectDetails(project);
+                showProjectDetails(project);
             }
         }
     });

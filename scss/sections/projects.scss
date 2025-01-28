@@ -22,12 +22,16 @@
         position: relative;
         border-radius: 8rem;
         cursor: pointer;
-        box-shadow: 0 0 3rem 1rem rgba(9, 43, 95, 0.4);
+        box-shadow: 1rem 1rem 3rem 1rem rgba(9, 43, 95, 0.4);
         transition: all 0.2s ease-in-out;
 
         &:hover {
             transform: scale(1.01);
-            box-shadow: 0 0 3rem 1rem rgba(252, 250, 248, 0.4);
+            box-shadow: 1rem 1rem 3rem 1rem rgba(252, 250, 248, 0.4);
+
+            .fa-solid {
+                color: var(--c-brand-white);
+            }
         }
 
         &-image {
@@ -63,7 +67,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: var(--c-brand-white);
+                color: var(--c-brand-light-blue);
 
                 .fa-solid {
                     font-size: 26rem;
@@ -94,5 +98,9 @@
         margin-inline: auto;
         background: var(--c-brand-dark-blue);
         color: var(--c-brand-white);
+
+        &:hover {
+            box-shadow: 1rem 1rem 2rem 1rem var(--c-brand-light-blue);
+        }
     }
 }

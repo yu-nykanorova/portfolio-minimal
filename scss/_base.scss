@@ -61,6 +61,7 @@ button {
 	max-width: 60rem;
 	margin-bottom: 30rem;
 	position: relative;
+	transition: all 0.2s ease-in-out;
 
 	&::after {
 		position: absolute;
@@ -70,6 +71,10 @@ button {
 		width: 160%;
 		height: 1rem;
 		background: var(--c-brand-white);
+	}
+
+	&:hover {
+		transform: scale(1.05);
 	}
 }
 
@@ -114,15 +119,25 @@ button {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-	font-size: 20rem;
-	font-weight: 500;
+	font-size: 18rem;
+	font-weight: 400;
 	border-radius: 8rem;
+	box-shadow: 1rem 1rem 2rem 1rem transparent;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		transform: scale(1.03);
+	}
 }
 
 .chapter-title {
 	font-size: 38rem;
 	font-weight: 400;
 	margin-bottom: 20rem;
+
+	@include desktop-small {
+		font-size: 34rem;            
+	}
 }
 
 .show-tab {

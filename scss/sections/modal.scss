@@ -16,13 +16,15 @@
         background: var(--c-brand-white-half-transp);
         border-radius: 10rem;
         position: relative;
+        width: 100%;
+        max-width: 1400rem;
 
         &-close-btn {
             position: absolute;
             top: 5rem;
             right: 5rem;
             background: var(--c-brand-dark-brown-half-transp);
-            padding: 5rem;
+            padding: 3rem 5rem;
             border-radius: 4rem;
             display: flex;
             justify-content: center;
@@ -45,9 +47,16 @@
 
             a {
                 display: block;
-                color: var(--c-brand-dark-brown);
+                color: var(--c-brand-light-blue);
                 font-size: 14rem;
-                font-weight: 500;
+                font-weight: 400;
+                text-shadow: 2rem 2rem 3rem var(--c-black);
+                background: var(--c-brand-dark-brown-half-transp);
+                padding: 2rem 0;
+
+                &.modal__content-project-repository {
+                    padding-bottom: 5rem;
+                }
             }
         }
 
@@ -69,19 +78,14 @@
 
         &-project-techniques {
             margin-inline: 0;
-            margin-bottom: 8rem;
             padding: 2rem 0;
             color: var(--c-brand-white);
             font-size: 18rem;
             background: var(--c-brand-dark-brown-half-transp);
         }
 
-        &-project-link {
-            margin-bottom: 5rem;
-        }
-
         &-project-repository {
-            margin-bottom: 15rem;
+            border-radius: 0 0 10rem 10rem;
         }
     }
 
