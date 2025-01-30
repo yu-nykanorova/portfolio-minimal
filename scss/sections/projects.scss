@@ -1,6 +1,18 @@
 .projects {
     padding: 50rem;
 
+    @include tablet {
+		padding: 40rem;            
+	}
+
+    @include tablet-small {
+		padding: 30rem;            
+	}
+
+    @include mobile {
+		padding: 20rem 15rem;            
+	}
+
     &__container {
         display: block;
         width: 100%;
@@ -9,6 +21,14 @@
 	&__desc {
         margin-bottom: 20rem;
         font-size: 18rem;
+
+        @include tablet {
+            margin-bottom: 12rem;            
+        }
+
+        @include tablet-small {
+            font-size: 16rem;
+        }
     }
 
 	&__list {
@@ -16,6 +36,14 @@
         grid-template-columns: repeat(auto-fit, minmax(250rem, 1fr));
         gap: 10rem;
         margin-bottom: 30rem;
+
+        @include tablet-small {
+            margin-bottom: 20rem;
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(auto-fit, 100%);
+        }
     }
 
 	&__item {
@@ -56,11 +84,22 @@
             color: var(--c-brand-light-blue);
             transition: all 0.2s ease-in-out;
 
+            @include tablet {
+                padding: 10rem 12rem;
+            }
+
             &-text {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 gap: 5rem;
+
+                @include tablet {
+                    gap: 10rem;            
+                }
+                @include mobile {
+                    gap: 5rem;            
+                }
             }
 
             &-arrow {
@@ -71,6 +110,10 @@
 
                 .fa-solid {
                     font-size: 26rem;
+
+                    @include mobile {
+                        font-size: 22rem;
+                    }
                 }
             }
         }
@@ -79,12 +122,22 @@
             font-size: 18rem;
             font-weight: 400;
             color: var(--c-brand-white);
+
+            @include tablet {
+                font-size: 22rem;            
+            }
+            @include mobile {
+                font-size: 16rem;
+            }
         }
 
         &-more {
             font-size: 14rem;
             font-weight: 300;
-            letter-spacing: 130%;
+
+            @include mobile {
+                font-size: 12rem;
+            }
         }
 
         &-detail, &-link, &-repository {
@@ -98,6 +151,15 @@
         margin-inline: auto;
         background: var(--c-brand-dark-blue);
         color: var(--c-brand-white);
+
+        @include tablet {
+            width: 50%;
+            font-size: 16rem;
+        }
+        @include mobile {
+            width: 80%;
+            font-size: 14rem;
+        }
 
         &:hover {
             box-shadow: 1rem 1rem 2rem 1rem var(--c-brand-light-blue);

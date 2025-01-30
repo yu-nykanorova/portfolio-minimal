@@ -1,6 +1,16 @@
 .skills {
     padding: 50rem 50rem 80rem;
 
+    @include tablet {
+		padding: 40rem 40rem 60rem;            
+	}
+    @include tablet-small {
+		padding: 40rem 30rem 50rem;            
+	}
+    @include mobile {
+		padding: 20rem 15rem;            
+	}
+
     &__container {
         display: block;
         overflow: hidden;
@@ -29,10 +39,27 @@
             z-index: 2;
             transition: all 0.3s ease;
 
+            @include tablet-small {
+                padding: 2rem;
+                width: 28rem;
+                height: 32rem;
+            }
+            @include mobile {
+                width: 24rem;
+                height: 30rem;
+            }
+
             .fa-solid {
                 color: var(--c-brand-white-half-transp);
                 font-size: 30rem;
                 transition: color 0.3s ease;
+
+                @include tablet-small {
+                    font-size: 26rem;
+                }
+                @include mobile {
+                    font-size: 20rem;
+                }
             }
 
             &:hover {
@@ -45,10 +72,18 @@
 
         &-btn-prev {
             left: 10rem;
+
+            @include tablet-small {
+                left: 14rem
+            }
         }
 
         &-btn-next {
             right: 10rem;
+
+            @include tablet-small {
+                right: 14rem
+            }
         }        
     }
 
@@ -78,7 +113,7 @@
         }
 
 	    &-name {
-            padding: 8rem;
+            padding: 5rem 1rem;
             background: var(--c-brand-light-blue);
             color: var(--c-brand-dark-brown);
             align-self: stretch;
@@ -86,6 +121,17 @@
             border-radius: 0 0 10rem 10rem;
             font-size: 20rem;
             font-weight: 500;
+
+            @include desktop-small {
+                font-size: 16rem;
+            }
+            @include tablet {
+                font-size: 14rem;
+            }
+            @include mobile {
+                font-size: 12rem;
+                font-weight: 300;
+            }
         }
     }
 }

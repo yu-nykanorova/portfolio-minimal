@@ -2,6 +2,10 @@
     margin-bottom: 20rem;
     min-width: 30%;
 
+    @include mobile {
+        margin-bottom: 15rem;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;
@@ -17,6 +21,10 @@
         gap: 5rem;
         position: relative;
 
+        @include mobile {
+            max-width: 30rem;
+        }
+
         &:hover {
             .navbar__item-title {
                 opacity: 1;
@@ -28,15 +36,30 @@
             display: block;
             position: absolute;
             bottom: -21rem;
-            left: calc(50%-9rem);
+            left: calc(50%-4rem);
             border-bottom: solid 18rem var(--c-brand-white-half-transp);
             border-left: solid 18rem transparent;
             border-right: solid 18rem transparent;
+
+            @include mobile {
+                border-bottom: solid 8rem var(--c-brand-white-half-transp);
+                border-left: solid 8rem transparent;
+                border-right: solid 8rem transparent;
+                bottom: -15rem;
+            }
         }
 
         .fa-solid {
             color: var(--c-brand-white-half-transp);
             font-size: 34rem;
+
+            @include tablet-small {
+                font-size: 30rem;
+            }
+
+            @include mobile {
+                font-size: 18rem;
+            }
         }
 
         &-title {
@@ -45,6 +68,10 @@
             color: var(--c-white);
             opacity: 0;
             transition: var(--transition);
+
+            @include mobile {
+                display: none;
+            }
         }
 
         &.is-active .fa-solid {

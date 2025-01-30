@@ -1,15 +1,30 @@
 .contacts {
     padding: 50rem;
 
+    @include tablet {
+		padding: 40rem;            
+	}
+    @include tablet-small {
+		padding: 30rem;            
+	}
+    @include mobile {
+		padding: 20rem 15rem;            
+	}
+
     &__container {
         width: 100%;
     }
 
-    &__title {}
-
     &__content {
         display: block;
         position: relative;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            gap: 20rem;            
+        }
     }
 
     &__form {
@@ -18,10 +33,19 @@
         justify-content: space-between;
         gap: 20rem;
         width: 60%;
-        padding: 50rem 60rem 50rem 40rem;
+        padding: 50rem 60rem 50rem 30rem;
         background: var(--c-brand-light-blue);
         border-radius: 8rem;
-        box-shadow: 0 0 5rem 1rem var(--c-gray-half-transp);
+        box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
+
+        @include tablet {
+            width: 100%;
+            padding: 30rem;            
+        }
+        @include mobile {
+            padding: 10rem;
+            gap: 10rem;            
+        }
 
         input, textarea {
             background: var(--c-brand-white-half-transp);
@@ -32,7 +56,7 @@
             box-shadow: inset 1rem 1rem var(--c-gray-half-transp), inset -1rem -1rem var(--c-gray-half-transp);
 
             &:focus {
-                box-shadow: 0 0 5rem 1rem var(--c-brand-dark-brown-half-transp);
+                box-shadow: 0 0 3rem 1rem var(--c-brand-dark-brown-half-transp);
             }
 
             &::placeholder {
@@ -41,14 +65,15 @@
             }
         }
 
-        &-input-name {}
-
-        &-input-email {}
-
         &-textarea {
             resize: vertical;
             min-height: 150rem;
             max-height: 350rem;
+
+            @include tablet {
+                min-height: 100rem;
+                max-height: 250rem;            
+            }
         }
 
         &-btn {
@@ -59,6 +84,10 @@
             letter-spacing: 120%;
             max-width: 300rem;
             margin-inline: auto;
+
+            @include tablet-small {
+                font-size: 16rem;
+            }
         }
     }
 
@@ -72,6 +101,14 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 15rem;
+
+        @include tablet {
+            position: initial;
+            top: initial;
+            left: initial;
+            right: initial;
+            transform: none;            
+        }
 
         &-contact-container {
             display: grid;
@@ -96,15 +133,24 @@
             text-align: center;
             background: var(--c-brand-white-half-transp);
             padding: 8rem;
-            box-shadow: 0 0 6rem 1rem var(--c-gray-half-transp);
+            box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
             border-radius: 4rem;
             font-size: 16rem;
             color: var(--c-brand-dark-blue);
             transition: all 0.2s ease-in-out;
 
+            @include tablet-small {
+                font-size: 14rem;
+                gap: 5rem;
+            }
+
             .fa-solid, .fa-brands {
                 font-size: 20rem;
                 transition: all 0.2s ease-in-out;
+
+                @include tablet-small {
+                    font-size: 18rem;
+                }
             }
 
             &:hover {
@@ -122,7 +168,11 @@
             align-items: center;
             border: 1rem solid var(--c-brand-dark-blue-half-transp);
             border-radius: 4rem;
-            box-shadow: 0 0 5rem 1rem var(--c-gray-half-transp);
+            box-shadow: 1rem 1rem 3rem 1rem var(--c-gray-half-transp);
+
+            @include tablet {
+                border: 0;            
+            }
             
             iframe {
                 border-radius: 4rem;

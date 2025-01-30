@@ -40,6 +40,10 @@ button {
 	padding: 5% 15%;
 	background: rgba(0, 0, 0, 0.5);
 	overflow-y: auto;
+
+	@include tablet {
+		padding: 8% 10%;
+	}
 }
 
 .content {
@@ -63,6 +67,19 @@ button {
 	position: relative;
 	transition: all 0.2s ease-in-out;
 
+	@include tablet {
+		max-width: 50rem;
+	}
+
+	@include tablet-small {
+		max-width: 40rem;
+	}
+
+	@include mobile {
+		margin-bottom: 15rem;
+		max-width: 30rem;
+	}
+
 	&::after {
 		position: absolute;
 		content: "";
@@ -85,6 +102,10 @@ button {
 	margin-bottom: 30rem;
 	position: relative;
 
+	@include tablet {
+		margin-bottom: 20rem;
+	}
+
 	&__top-line {
 		position: absolute;
 		top: 0;
@@ -95,6 +116,10 @@ button {
 		background: var(--c-brand-white);
 		border-radius: 10rem 10rem 0 0;
 		z-index: 2;
+
+		@include mobile {
+			height: 10rem;
+		}
 	}
 }
 
@@ -110,7 +135,11 @@ button {
 		color: var(--c-brand-white);
 		font-size: 16rem;
 		font-weight: 400;
-		letter-spacing: 150%;
+
+		@include tablet-small {
+			font-size: 14rem;
+			font-weight: 300;
+		}
 	}
 }
 
@@ -137,6 +166,21 @@ button {
 
 	@include desktop-small {
 		font-size: 34rem;            
+	}
+
+	@include tablet {
+		font-size: 32rem;
+		margin-bottom: 18rem;            
+	}
+
+	@include tablet-small {
+		font-size: 26rem;
+		margin-bottom: 14rem;            
+	}
+
+	@include mobile {
+		font-size: 20rem;
+		margin-bottom: 10rem; 
 	}
 }
 

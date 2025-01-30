@@ -1,6 +1,16 @@
 .education {
     padding: 50rem;
 
+    @include tablet {
+		padding: 40rem;            
+	}
+    @include tablet-small {
+		padding: 30rem;            
+	}
+    @include mobile {
+		padding: 20rem 15rem;            
+	}
+
     &__container {
         display: block;
         width: 100%;
@@ -8,10 +18,13 @@
 
     &__list {
         display: flex;
-        //flex-direction: column;
         justify-content: space-between;
         align-items: stretch;
         gap: 15rem;
+
+        @include tablet {
+            flex-direction: column;            
+        }
     }
 
     &__item {
@@ -23,6 +36,17 @@
         border-radius: 8rem;
         padding-top: 10rem;
 
+        @include tablet {
+            flex: initial;   
+            grid-template-rows: 40rem 40rem 1fr 70rem 1fr;         
+        }
+        @include tablet-small {
+            grid-template-rows: 30rem 30rem 1fr 70rem 1fr;         
+        }
+        @include mobile {
+            grid-template-rows: 20rem 20rem 1fr 50rem 1fr;         
+        }
+
         & > * {
             display: flex;
             align-items: center;
@@ -30,6 +54,10 @@
 
             &:not(.education__item-icon, .education__item-logo) {
                 padding: 10rem;
+
+                @include mobile {
+                    padding: 5rem;
+                }
             }
         }
 
@@ -46,6 +74,12 @@
                 @include desktop-small {
                     font-size: 24rem;            
                 }
+                @include tablet-small {
+                    font-size: 20rem;            
+                }
+                @include mobile {
+                    font-size: 16rem;            
+                }
             }
         }
 
@@ -56,6 +90,17 @@
             line-height: 100%;
             display: flex;
             align-items: center;
+
+            @include tablet {
+                font-size: 22rem;
+            }
+            @include tablet-small {
+                font-size: 20rem;
+                margin-top: 5rem;
+            }
+            @include mobile {
+                font-size: 16rem;
+            }
         }
 
         &-name {
@@ -66,6 +111,30 @@
 
             @include desktop-small {
                 font-size: 20rem;            
+            }
+            @include tablet {
+                font-size: 18rem;
+            }
+            @include tablet-small {
+                font-size: 16rem;
+            }
+            @include mobile {
+                font-weight: 400;
+            }
+
+            &.big-screen {
+                display: block;
+
+                @include tablet {
+                    display: none;
+                }
+            }
+            &.small-screen {
+                display: none;
+
+                @include tablet {
+                    display: block;
+                }
             }
         }
 
@@ -83,11 +152,17 @@
             font-size: 18rem;
             font-weight: 400;
             line-height: 150%;
-            letter-spacing: 130%;
             color: var(--c-brand-dark-blue);
 
             @include desktop-small {
-                font-size: 16rem;            
+                font-size: 16rem;
+                line-height: 120%;            
+            }
+            @include tablet-small {
+                font-size: 14rem;            
+            }
+            @include mobile {
+                font-size: 12rem;            
             }
         }
     }
