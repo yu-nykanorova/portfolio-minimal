@@ -62,6 +62,81 @@ li {
   --c-brand-dark-brown: #5a211d;
   --c-brand-dark-brown-half-transp: rgba(90, 33, 29, 0.7); }
 
+.fade-in {
+  -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+.heartbeat {
+  -webkit-animation: heartbeat 3s ease-in-out 5s infinite both;
+  animation: heartbeat 3s ease-in-out 5s infinite both; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; } }
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; } }
 html, body {
   height: 100%; }
 
@@ -257,81 +332,6 @@ button {
 .hide-tab {
   display: none; }
 
-.fade-in {
-  -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
-
-.heartbeat {
-  -webkit-animation: heartbeat 3s ease-in-out 5s infinite both;
-  animation: heartbeat 3s ease-in-out 5s infinite both; }
-
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; }
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in; }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; }
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in; }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; } }
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; }
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in; }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; }
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in; }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; } }
 .navbar {
   margin-bottom: 20rem;
   min-width: 30%; }
@@ -445,7 +445,7 @@ button {
         padding: 40rem 5rem 40rem 30rem; } }
     @media (max-width: 576px) {
       .home__welcome {
-        padding: 30rem 15rem 15rem 15rem;
+        padding: 30rem 15rem 15rem 20rem;
         text-align: center; } }
     .home__welcome-title {
       font-size: 44rem;
@@ -464,7 +464,6 @@ button {
           margin-bottom: 20rem; } }
       @media (max-width: 576px) {
         .home__welcome-title {
-          margin-bottom: 10rem;
           font-size: 24rem; } }
       .home__welcome-title h1 {
         font-size: 46rem;
@@ -499,8 +498,7 @@ button {
           margin-bottom: 30rem; } }
       @media (max-width: 576px) {
         .home__welcome-desc {
-          font-size: 16rem;
-          margin-bottom: 20rem; } }
+          font-size: 16rem; } }
     .home__welcome-buttons {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -589,7 +587,7 @@ button {
          object-fit: cover; }
       @media (max-width: 576px) {
         .home__image img {
-          max-height: 250rem;
+          max-height: 350rem;
           -o-object-position: 0 -15rem;
              object-position: 0 -15rem; } }
     .home__image-arrow {
