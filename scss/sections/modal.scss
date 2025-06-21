@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
     z-index: 5;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 15%;
     overflow: auto;
 
@@ -17,7 +17,7 @@
     }
 
     &__content {
-        background: var(--c-brand-white-half-transp);
+        background-color: var(--c-brand-white-half-transp);
         border-radius: 10rem;
         position: relative;
         width: 100%;
@@ -27,12 +27,13 @@
             position: absolute;
             top: 5rem;
             right: 5rem;
-            background: var(--c-brand-dark-brown-half-transp);
+            background-color: var(--c-brand-dark-brown-half-transp);
             padding: 3rem 5rem;
             border-radius: 4rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            box-shadow: 1rem 1rem 2rem 1rem var(--c-black-half-transp);
 
             .fa-solid {
                 color: var(--c-brand-white-half-transp);
@@ -58,19 +59,16 @@
                 color: var(--c-brand-light-blue);
                 font-size: 14rem;
                 font-weight: 400;
+                letter-spacing: 1rem;
                 text-shadow: 2rem 2rem 3rem var(--c-black);
-                background: var(--c-brand-dark-brown-half-transp);
-                padding: 2rem 0;
+                background-color: var(--c-brand-dark-brown-half-transp);
+                padding: 5rem 0;
 
                 @include tablet-small {
                     padding: 5rem 0;
                 }
                 @include mobile {
                     padding: 3rem 0;
-                }
-
-                &.modal__content-project-repository {
-                    padding-bottom: 5rem;
                 }
             }
         }
@@ -94,31 +92,35 @@
         &-project-title {
             margin: 15rem 10rem 8rem 10rem;
             color: var(--c-brand-dark-brown);
-            font-size: 26rem;
+            text-shadow: 2rem 1rem 2rem var(--c-brand-white-half-transp);
+            font-size: 36rem;
             font-weight: 600;
+            letter-spacing: 2rem;
 
             @include tablet-small {
                 margin: 10rem 8rem 5rem;
+                font-size: 28rem;
             }
             @include mobile {
-                font-size: 22rem;
+                margin: 8rem 5rem 5rem;
+                font-size: 20rem;
                 font-weight: 500;
             }
         }
 
         &-project-techniques {
             margin-inline: 0;
-            padding: 2rem 0;
+            padding: 7rem 0;
             color: var(--c-brand-white);
+            text-shadow: 2rem 2rem 3rem var(--c-black);
             font-size: 18rem;
-            background: var(--c-brand-dark-brown-half-transp);
+            background-color: var(--c-brand-dark-brown-half-transp);
 
             @include tablet {
                 padding: 5rem 0;
             }
             @include mobile {
                 font-size: 16rem;
-                padding: 2rem 0;
             }
         }
 

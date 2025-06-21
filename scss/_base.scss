@@ -38,11 +38,15 @@ button {
 	width: 100%;
 	min-height: 100%;
 	padding: 5% 15%;
-	background: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	overflow-y: auto;
 
 	@include tablet {
 		padding: 8% 10%;
+	}
+
+	@include tablet {
+		padding: 8% 5%;
 	}
 }
 
@@ -87,7 +91,7 @@ button {
 		bottom: 0;
 		width: 160%;
 		height: 1rem;
-		background: var(--c-brand-white);
+		background-color: var(--c-brand-white);
 	}
 
 	&:hover {
@@ -97,7 +101,7 @@ button {
 
 .main {
 	width: 100%;
-	background: var(--c-brand-white-half-transp);
+	background-color: var(--c-brand-white-half-transp);
 	border-radius: 10rem;
 	margin-bottom: 30rem;
 	position: relative;
@@ -113,7 +117,7 @@ button {
 		right: 0;
 		width: 100%;
 		height: 20rem;
-		background: var(--c-brand-white);
+		background-color: var(--c-brand-white);
 		border-radius: 10rem 10rem 0 0;
 		z-index: 2;
 

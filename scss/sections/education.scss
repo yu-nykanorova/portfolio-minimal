@@ -23,13 +23,14 @@
         gap: 15rem;
 
         @include tablet {
-            flex-direction: column;            
+            flex-direction: column;
+            align-items: center;            
         }
     }
 
     &__item {
         flex: 0 0 calc((100% - 15rem * 2) / 3);
-        background: var(--c-brand-white);
+        background-color: var(--c-brand-white);
         display: grid;
         grid-template-rows: 50rem 50rem 150rem 100rem 1fr;
         text-align: center;
@@ -37,13 +38,16 @@
         padding-top: 10rem;
 
         @include tablet {
-            flex: initial;   
+            flex: initial;
+            width: 70%;   
             grid-template-rows: 40rem 40rem 1fr 70rem 1fr;         
         }
         @include tablet-small {
+            width: 90%; 
             grid-template-rows: 30rem 30rem 1fr 70rem 1fr;         
         }
         @include mobile {
+            width: 100%;
             grid-template-rows: 20rem 20rem 1fr 50rem 1fr;         
         }
 
@@ -65,7 +69,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: var(--c-brand-dark-blue-half-transp);
+            background-color: var(--c-brand-dark-blue-half-transp);
 
             .fa-solid {
                 color: var(--c-brand-white);
@@ -140,7 +144,7 @@
 
         &-logo {
             display: flex;
-            background: var(--c-brand-light-blue);
+            background-color: var(--c-brand-light-blue);
 
             img {
                 height: 100%;

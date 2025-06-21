@@ -34,7 +34,7 @@
         gap: 20rem;
         width: 60%;
         padding: 50rem 60rem 50rem 30rem;
-        background: var(--c-brand-light-blue);
+        background-color: var(--c-brand-light-blue);
         border-radius: 8rem;
         box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
 
@@ -48,7 +48,7 @@
         }
 
         input, textarea {
-            background: var(--c-brand-white-half-transp);
+            background-color: var(--c-brand-white-half-transp);
             border-radius: 4rem;
             padding: 5rem 8rem;
             font-size: 16rem;
@@ -78,7 +78,7 @@
 
         &-btn {
             padding: 12rem;
-            background: var(--c-brand-dark-blue);
+            background-color: var(--c-brand-dark-blue);
             color: var(--c-brand-white);
             font-size: 18rem;
             letter-spacing: 120%;
@@ -131,7 +131,7 @@
             justify-content: space-between;
             gap: 10rem;
             text-align: center;
-            background: var(--c-brand-white-half-transp);
+            background-color: var(--c-brand-white-half-transp);
             padding: 8rem;
             box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
             border-radius: 4rem;
@@ -154,7 +154,7 @@
             }
 
             &:hover {
-                background: var(--c-brand-dark-blue-half-transp);
+                background-color: var(--c-brand-dark-blue-half-transp);
                 color: var(--c-brand-light-blue);
                 .fa-solid, .fa-brands {
                     color: var(--c-brand-light-blue);

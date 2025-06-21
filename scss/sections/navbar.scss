@@ -1,29 +1,30 @@
 .navbar {
-    margin-bottom: 20rem;
-    min-width: 30%;
-
-    @include mobile {
-        margin-bottom: 15rem;
-    }
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15rem;
 
     &__list {
+        width: 50%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 20rem;
+        gap: 10rem;
+
+        @include tablet-small {
+            width: 70%;
+        }
     }
 
     &__item {
+        width: calc((100% - 10rem * 4) / 5);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 5rem;
         position: relative;
-
-        @include mobile {
-            max-width: 30rem;
-        }
 
         &:hover {
             .navbar__item-title {
@@ -35,7 +36,7 @@
             content: "";
             display: block;
             position: absolute;
-            bottom: -21rem;
+            bottom: -22rem;
             left: calc(50%-4rem);
             border-bottom: solid 18rem var(--c-brand-white-half-transp);
             border-left: solid 18rem transparent;
@@ -45,7 +46,7 @@
                 border-bottom: solid 8rem var(--c-brand-white-half-transp);
                 border-left: solid 8rem transparent;
                 border-right: solid 8rem transparent;
-                bottom: -15rem;
+                bottom: -17rem;
             }
         }
 
@@ -58,7 +59,7 @@
             }
 
             @include mobile {
-                font-size: 18rem;
+                font-size: 24rem;
             }
         }
 

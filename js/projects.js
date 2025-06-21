@@ -11,16 +11,16 @@ window.addEventListener("DOMContentLoaded", () => {
             title: "Coffee",
             techniques: "techniques",
             link: "#",
-            repository: "#"    
+            repository: "https://github.com/yu-nykanorova/coffee_app_react_json-server"    
         },
         {
             id: 2,
-            img: "img/projects/diagnostic_center.jpg",
-            altImg: "diagnostic center",
-            title: "Diagnostic center",
+            img: "img/projects/plant_shop.jpg",
+            altImg: "plant shop",
+            title: "Plant Shop",
             techniques: "techniques",
             link: "#",
-            repository: "#"    
+            repository: "https://github.com/yu-nykanorova/plant-shop_tailwindcss"    
         },
         {
             id: 3,
@@ -29,16 +29,16 @@ window.addEventListener("DOMContentLoaded", () => {
             title: "Enver",
             techniques: "techniques",
             link: "#",
-            repository: "#"    
+            repository: "https://github.com/yu-nykanorova/enver"    
         },
         {
             id: 4,
-            img: "img/projects/fashion_shop.jpg",
-            altImg: "fashion shop",
-            title: "Fashion Shop",
+            img: "img/projects/no_photo.png",
+            altImg: "space",
+            title: "Space",
             techniques: "techniques",
             link: "#",
-            repository: "#"    
+            repository: "https://github.com/yu-nykanorova/space"    
         },
         {
             id: 5,
@@ -47,16 +47,62 @@ window.addEventListener("DOMContentLoaded", () => {
             title: "Movie",
             techniques: "techniques",
             link: "#",
-            repository: "#"    
+            repository: "https://github.com/yu-nykanorova/movie"    
         },
         {
             id: 6,
-            img: "img/projects/plant_shop.jpg",
-            altImg: "plant shop",
-            title: "Plant Shop",
+            img: "img/projects/no_photo.png",
+            altImg: "skilline",
+            title: "Skilline",
             techniques: "techniques",
             link: "#",
-            repository: "#"    
+            repository: "https://github.com/yu-nykanorova/skilline"    
+        },
+        {
+            id: 7,
+            img: "img/projects/no_photo.png",
+            altImg: "food delivery",
+            title: "Food delivery",
+            techniques: "techniques",
+            link: "#",
+            repository: "https://github.com/yu-nykanorova/food_delivery"    
+        },
+        {
+            id: 8,
+            img: "img/projects/fashion_shop.jpg",
+            altImg: "fashion shop",
+            title: "Fashion Shop",
+            techniques: "techniques",
+            link: "#",
+            repository: "https://github.com/yu-nykanorova/fashion-shop"    
+        },
+
+        {
+            id: 9,
+            img: "img/projects/diagnostic_center.jpg",
+            altImg: "diagnostic center",
+            title: "Diagnostic center",
+            techniques: "techniques",
+            link: "#",
+            repository: "https://github.com/yu-nykanorova/HW16_diagnostic-center"    
+        },
+        {
+            id: 10,
+            img: "img/projects/no_photo.png",
+            altImg: "watch",
+            title: "Watch",
+            techniques: "techniques",
+            link: "#",
+            repository: "https://github.com/yu-nykanorova/TW_Watch"    
+        },
+        {
+            id: 11,
+            img: "img/projects/no_photo.png",
+            altImg: "virtual reality",
+            title: "Virtual reality",
+            techniques: "techniques",
+            link: "#",
+            repository: "https://github.com/yu-nykanorova/virtual_reality"    
         },
     ]
 
@@ -82,7 +128,6 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="projects__item-info">
                 <div class="projects__item-info-text">
                     <div class="projects__item-title">${title}</div>
-                    <p class="projects__item-more">Click for more details...</p>
                 </div>
                 <div class="projects__item-info-arrow">
                     <i class="fa-solid fa-chevron-right"></i>
@@ -109,7 +154,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // displaying projects
 
-    const projectsToShow = 4;
+    const projectsToShow = 6;
     showProjects(projects, 0, projectsToShow, true);
 
     moreProjectsButton.addEventListener("click", () => {
@@ -142,9 +187,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 <img src=${item.img} alt=${item.altImg}>
             </div>
             <div class="modal__content-project-title">${item.title}</div>
-            <div class="modal__content-project-techniques">Used: ${item.techniques}</div>
+            <div class="modal__content-project-techniques">Used techniques: ${item.techniques}</div>
             <a href=${item.link} class="modal__content-project-link" target="_blank">Click to explore</a>
-            <a href=${item.repository} class="modal__content-project-repository" target="_blank">Go to GitHub repository</a>
+            <a href=${item.repository} class="modal__content-project-repository" target="_blank">GitHub repository</a>
         `;
 
         modalContent.append(itemModal);

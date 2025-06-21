@@ -3,11 +3,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // CV button
 
-    const cvButton = document.querySelector(".btn-cv");
+    // const cvButton = document.querySelector(".btn-cv");
 
-    cvButton.addEventListener("click", () => {
-        cvButton.classList.toggle("active-text");
-    });
+    // cvButton.addEventListener("click", () => {
+    //     cvButton.classList.toggle("active-text");
+    // });
 
     // footer copyright section
 

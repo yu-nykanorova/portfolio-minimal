@@ -26,12 +26,10 @@
         &-btn-prev, &-btn-next {
             position: absolute;
             top: 50%;
-            padding: 5rem;
+            padding: 13rem;
             transform: translateY(-50%);
-            background: var(--c-brand-dark-blue-half-transp);
-            width: 36rem;
-            height: 44rem;
-            border-radius: 4rem;
+            background-color: var(--c-brand-dark-blue-half-transp);
+            border-radius: 5rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -39,26 +37,24 @@
             z-index: 2;
             transition: all 0.3s ease;
 
-            @include tablet-small {
-                padding: 2rem;
-                width: 28rem;
-                height: 32rem;
+            @include desktop-small {
+                padding: 10rem;
             }
+
             @include mobile {
-                width: 24rem;
-                height: 30rem;
+                padding: 8rem;
             }
 
             .fa-solid {
                 color: var(--c-brand-white-half-transp);
-                font-size: 30rem;
+                font-size: 34rem;
                 transition: color 0.3s ease;
 
-                @include tablet-small {
-                    font-size: 26rem;
+                @include desktop-small {
+                    font-size: 30rem;
                 }
                 @include mobile {
-                    font-size: 20rem;
+                    font-size: 24rem;
                 }
             }
 
@@ -100,7 +96,7 @@
         justify-content: center;
         align-items: center;
         gap: 10rem;
-        background: var(--c-brand-white-half-transp);
+        background-color: var(--c-brand-white-half-transp);
         border-radius: 8rem;
 
         &-image {
@@ -114,7 +110,7 @@
 
 	    &-name {
             padding: 5rem 1rem;
-            background: var(--c-brand-light-blue);
+            background-color: var(--c-brand-light-blue);
             color: var(--c-brand-dark-brown);
             align-self: stretch;
             text-align: center;
@@ -125,11 +121,7 @@
             @include desktop-small {
                 font-size: 16rem;
             }
-            @include tablet {
-                font-size: 14rem;
-            }
             @include mobile {
-                font-size: 12rem;
                 font-weight: 300;
             }
         }
