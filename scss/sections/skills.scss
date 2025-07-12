@@ -28,7 +28,8 @@
             top: 50%;
             padding: 13rem;
             transform: translateY(-50%);
-            background-color: var(--c-brand-dark-blue-half-transp);
+            background-color: var(--c-brand-dark-green-half-transp);
+            box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
             border-radius: 5rem;
             display: flex;
             justify-content: center;
@@ -59,9 +60,9 @@
             }
 
             &:hover {
-                box-shadow: 0 0 5rem 1rem var(--c-brand-light-blue);
+                background-color: var(--c-brand-white);
                 .fa-solid {
-                    color: var(--c-brand-light-blue);
+                    color: var(--c-brand-dark-brown);
                 }
             }
         }
@@ -110,19 +111,16 @@
 
 	    &-name {
             padding: 5rem 1rem;
-            background-color: var(--c-brand-light-blue);
-            color: var(--c-brand-dark-brown);
+            background-color: var(--c-brand-dark-green);
+            font-family: var(--font-second);
+            color: var(--c-brand-white);
+            font-size: 20rem;
             align-self: stretch;
             text-align: center;
             border-radius: 0 0 10rem 10rem;
-            font-size: 20rem;
-            font-weight: 500;
 
             @include desktop-small {
                 font-size: 16rem;
-            }
-            @include mobile {
-                font-weight: 300;
             }
         }
     }

@@ -20,6 +20,7 @@
 
 	&__desc {
         margin-bottom: 20rem;
+        font-family: var(--font-second);
         font-size: 20rem;
 
         @include tablet {
@@ -88,7 +89,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background-color: var(--c-brand-dark-brown-half-transp);
+            background-color: var(--c-brand-dark-green-half-transp);
             border-radius: 0 0 8rem 8rem;
             padding: 10rem 8rem;
             color: var(--c-brand-light-blue);
@@ -149,20 +150,26 @@
         padding: 12rem 23rem;
         width: 200rem;
         margin-inline: auto;
-        background-color: var(--c-brand-dark-blue);
+        background-color: var(--c-brand-dark-green);
         color: var(--c-brand-white);
+        box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
 
         @include tablet {
-            width: 50%;
+            width: 30%;
+            font-size: 16rem;
+        }
+        @include tablet-small {
+            width: 40%;
             font-size: 16rem;
         }
         @include mobile {
-            width: 80%;
+            width: 100%;
+            padding: 12rem 8rem;
             font-size: 14rem;
         }
 
         &:hover {
-            box-shadow: 1rem 1rem 2rem 1rem var(--c-brand-light-blue);
+            box-shadow: 0 0 2rem 0 var(--c-brand-white-half-transp);
         }
     }
 }

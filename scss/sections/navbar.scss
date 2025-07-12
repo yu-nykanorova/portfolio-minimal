@@ -25,6 +25,7 @@
         align-items: center;
         gap: 5rem;
         position: relative;
+        cursor: pointer;
 
         &:hover {
             .navbar__item-title {
@@ -64,6 +65,7 @@
         }
 
         &-title {
+            font-family: var(--font-second);
             font-size: 14rem;
             font-weight: 300;
             color: var(--c-white);
@@ -76,11 +78,11 @@
         }
 
         &.is-active .fa-solid {
-            color: var(--c-brand-white);
+            color: var(--c-brand-light-blue);
         }
 
         &.is-active::after {
-            border-bottom-color: var(--c-brand-white);
+            border-bottom-color: var(--c-brand-light-blue);
         }
     }
 }

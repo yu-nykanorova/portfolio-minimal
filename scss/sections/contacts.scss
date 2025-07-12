@@ -52,7 +52,7 @@
             border-radius: 4rem;
             padding: 5rem 8rem;
             font-size: 16rem;
-            color: var(--c-brand-dark-blue);
+            color: var(--c-brand-dark-green);
             box-shadow: inset 1rem 1rem var(--c-gray-half-transp), inset -1rem -1rem var(--c-gray-half-transp);
 
             &:focus {
@@ -60,6 +60,7 @@
             }
 
             &::placeholder {
+                font-family: var(--font-second);
                 font-size: 14rem;
                 color: var(--c-brand-dark-brown-half-transp);
             }
@@ -78,12 +79,13 @@
 
         &-btn {
             padding: 12rem;
-            background-color: var(--c-brand-dark-blue);
+            background-color: var(--c-brand-dark-green);
             color: var(--c-brand-white);
             font-size: 18rem;
             letter-spacing: 120%;
             max-width: 300rem;
             margin-inline: auto;
+            box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
 
             @include tablet-small {
                 font-size: 16rem;
@@ -131,12 +133,13 @@
             justify-content: space-between;
             gap: 10rem;
             text-align: center;
-            background-color: var(--c-brand-white-half-transp);
+            background-color: var(--c-brand-dark-green-half-transp);
             padding: 8rem;
             box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
             border-radius: 4rem;
+            font-family: var(--font-second);
             font-size: 16rem;
-            color: var(--c-brand-dark-blue);
+            color: var(--c-brand-white);
             transition: all 0.2s ease-in-out;
 
             @include tablet-small {
@@ -154,10 +157,10 @@
             }
 
             &:hover {
-                background-color: var(--c-brand-dark-blue-half-transp);
-                color: var(--c-brand-light-blue);
+                background-color: var(--c-brand-white);
+                color: var(--c-brand-dark-brown);
                 .fa-solid, .fa-brands {
-                    color: var(--c-brand-light-blue);
+                    color: var(--c-brand-dark-brown);
                 }
             }
         }
@@ -166,7 +169,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1rem solid var(--c-brand-dark-blue-half-transp);
+            border: 1rem solid var(--c-brand-dark-green-half-transp);
             border-radius: 4rem;
             box-shadow: 1rem 1rem 3rem 1rem var(--c-gray-half-transp);
 

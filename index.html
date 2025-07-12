@@ -17,51 +17,54 @@
                 <img src="img/logo_light.png" alt="logo">
             </a>
             <div class="navbar">
-                <div class="navbar__list">
-                    <a class="navbar__item is-active">
+                <ul class="navbar__list">
+                    <li class="navbar__item is-active" tabindex="0">
                         <i class="fa-solid fa-house-user"></i>
                         <p class="navbar__item-title">Home</p>
-                    </a>
-                    <a class="navbar__item">
+                    </li>
+                    <li class="navbar__item" tabindex="0">
                         <i class="fa-solid fa-graduation-cap"></i>
                         <p class="navbar__item-title">Education</p>
-                    </a>
-                    <a class="navbar__item">
+                    </li>
+                    <li class="navbar__item" tabindex="0">
                         <i class="fa-solid fa-screwdriver-wrench"></i>
                         <p class="navbar__item-title">Skills</p>
-                    </a>
-                    <a class="navbar__item">
+                    </li>
+                    <li class="navbar__item" tabindex="0">
                         <i class="fa-solid fa-briefcase"></i>
                         <p class="navbar__item-title">Projects</p>
-                    </a>
-                    <a class="navbar__item">
+                    </li>
+                    <li class="navbar__item" tabindex="0">
                         <i class="fa-solid fa-envelope"></i>
                         <p class="navbar__item-title">Contacts</p>
-                    </a>
-                </div>
+                    </li>
+                </ul>
             </div>
             <div class="main">
                 <div class="main__top-line"></div>
                 <section id="home" class="tab-item home">
                     <div class="home__container">
                         <div class="home__welcome">
-                            <div class="home__welcome-title">Hi, I'm <h1>Yuliia Nykanorova</h1></div>
+                            <div class="home__welcome-title">
+                                <p>Hi, I'm</p>
+                                <h1>Yuliia Nykanorova</h1>
+                            </div>
                             <p class="home__welcome-desc">trainee web-developer</p>
                             <div class="home__welcome-buttons">
                                 <div class="btn btn-cv heartbeat">
                                     <div class="btn-cv-text">Download CV</div>
                                     <div class="btn-cv-text-hover">
-                                        <a href="files/CV Nykanorova eng.pdf" class="btn-cv-download-eng" target="_blank">ENG</a>
+                                        <a href="files/CV Nykanorova eng.pdf" class="btn-cv-download-eng" aria-label="Open english version" target="_blank">ENG</a>
                                         |
-                                        <a href="files/CV Nykanorova ukr.pdf" class="btn-cv-download-ukr" target="_blank">UKR</a>
+                                        <a href="files/CV Nykanorova ukr.pdf" class="btn-cv-download-ukr" aria-label="Open ukrainian version" target="_blank">UKR</a>
                                     </div>
                                 </div>
-                                <div class="btn btn-contact">Contact me</div>
+                                <button class="btn btn-contact" aria-label="Contact me">Contact me</button>
                             </div>
                         </div>
                         <div class="home__image">
                             <img src="img/hero2_cut.JPG" alt="hero">
-                            <div class="home__image-arrow">
+                            <div class="home__image-arrow" role="button" tabindex="0" aria-label="Show my works">
                                 <i class="fa-solid fa-chevron-right"></i>
                             </div>
                         </div>
@@ -196,9 +199,9 @@
                         <div class="chapter-title contacts__title">Contact Me</div>
                         <div class="contacts__content">
                             <form action="/" class="contacts__form" method="post">
-                                <input type="text" class="contacts__form-input-name" placeholder="Your name">
-                                <input type="email" class="contacts__form-input-email" placeholder="Your email">
-                                <textarea class="contacts__form-textarea" placeholder="Enter your message"></textarea>
+                                <input type="text" name="name" class="contacts__form-input-name" placeholder="Your name">
+                                <input type="email" name="email" class="contacts__form-input-email" placeholder="Your email">
+                                <textarea name="message" class="contacts__form-textarea" placeholder="Enter your message"></textarea>
                                 <button class="btn contacts__form-btn" type="submit">Send message</button>
                             </form>
                             <div class="contacts__data">
@@ -213,17 +216,35 @@
                                     </a>
                                 </div>
                                 <div class="contacts__data-socials-container">
-                                    <a href="https://www.facebook.com/profile.php?id=100015100501612" class="contacts__data-item item-fb">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                        <div class="link-fb">Facebook</div>
+                                    <a
+                                        href="https://www.facebook.com/profile.php?id=100015100501612"
+                                        class="contacts__data-item item-fb"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Open Facebook profile"
+                                    >
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                            <div class="link-fb">Facebook</div>
                                     </a>
-                                    <a href="https://www.linkedin.com/in/yuliia-nykanorova-77254015b/"  class="contacts__data-item item-linkedin">
-                                        <i class="fa-brands fa-linkedin-in"></i>
-                                        <div class="link-linkedin">LinkedIn</div>
+                                    <a
+                                        href="https://www.linkedin.com/in/yuliia-nykanorova-77254015b/" 
+                                        class="contacts__data-item item-linkedin"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Open LinkedIn profile"
+                                    >
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                            <div class="link-linkedin">LinkedIn</div>
                                     </a>
-                                    <a href="https://github.com/yu-nykanorova" class="contacts__data-item item-github">
-                                        <i class="fa-brands fa-github"></i>
-                                        <div class="link-github">GitHub</div>
+                                    <a
+                                        href="https://github.com/yu-nykanorova"
+                                        class="contacts__data-item item-github"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Open GitHub profile"
+                                    >
+                                            <i class="fa-brands fa-github"></i>
+                                            <div class="link-github">GitHub</div>
                                     </a>
                                 </div>
                                 <div class="contacts__data-map-container">
@@ -243,8 +264,11 @@
             <footer class="footer">
                 <div class="footer__copyright"></div>
             </footer>
-            <div class="modal">
-                <div class="modal__content"></div>
+            <div class="modal-project">
+                <div class="modal-project__content"></div>
+            </div>
+            <div class="modal-alert">
+                <div class="modal-alert__content"></div>
             </div>
         </div>
     </div>

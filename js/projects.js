@@ -15,12 +15,12 @@ window.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 2,
-            img: "img/projects/plant_shop.jpg",
-            altImg: "plant shop",
-            title: "Plant Shop",
+            img: "img/projects/no_photo.png",
+            altImg: "space",
+            title: "Space",
             techniques: "techniques",
-            link: "#",
-            repository: "https://github.com/yu-nykanorova/plant-shop_tailwindcss"    
+            link: "https://space-git-main-yuliias-projects-dbf12d92.vercel.app",
+            repository: "https://github.com/yu-nykanorova/space"    
         },
         {
             id: 3,
@@ -33,21 +33,21 @@ window.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 4,
-            img: "img/projects/no_photo.png",
-            altImg: "space",
-            title: "Space",
-            techniques: "techniques",
-            link: "#",
-            repository: "https://github.com/yu-nykanorova/space"    
-        },
-        {
-            id: 5,
             img: "img/projects/movie.jpg",
             altImg: "movie",
             title: "Movie",
             techniques: "techniques",
             link: "#",
             repository: "https://github.com/yu-nykanorova/movie"    
+        },
+        {
+            id: 5,
+            img: "img/projects/plant_shop.jpg",
+            altImg: "plant shop",
+            title: "Plant Shop",
+            techniques: "techniques",
+            link: "#",
+            repository: "https://github.com/yu-nykanorova/plant-shop_tailwindcss"    
         },
         {
             id: 6,
@@ -76,7 +76,6 @@ window.addEventListener("DOMContentLoaded", () => {
             link: "#",
             repository: "https://github.com/yu-nykanorova/fashion-shop"    
         },
-
         {
             id: 9,
             img: "img/projects/diagnostic_center.jpg",
@@ -109,13 +108,13 @@ window.addEventListener("DOMContentLoaded", () => {
     // used DOM elements
 
     const projectsList = document.querySelector(".projects__list");
-    const modal = document.querySelector(".modal");
-    const modalContent = document.querySelector(".modal__content");
+    const modal = document.querySelector(".modal-project");
+    const modalContent = document.querySelector(".modal-project__content");
     const moreProjectsButton = document.querySelector(".projects__btn-more");
 
     // function to create project card
 
-    function createProjectCard (id, img, alt, title) {
+    function createProjectCard(id, img, alt, title) {
         const projectCard = document.createElement("div");
 
         projectCard.classList.add("projects__item");
@@ -154,7 +153,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // displaying projects
 
-    const projectsToShow = 6;
+    const projectsToShow = 8;
     showProjects(projects, 0, projectsToShow, true);
 
     moreProjectsButton.addEventListener("click", () => {
@@ -174,22 +173,22 @@ window.addEventListener("DOMContentLoaded", () => {
 
     function showProjectDetails(item) {
         modalContent.innerHTML = `
-            <div class="modal__content-close-btn">
+            <div class="modal-project__content-close-btn">
                 <i class="fa-solid fa-xmark"></i>
             </div>
         `;
         
         const itemModal = document.createElement("div");
-        itemModal.classList.add("modal__content-project-data");
+        itemModal.classList.add("modal-project__content-project-data");
 
         itemModal.innerHTML = `
-            <div class="modal__content-project-image">
+            <div class="modal-project__content-project-image">
                 <img src=${item.img} alt=${item.altImg}>
             </div>
-            <div class="modal__content-project-title">${item.title}</div>
-            <div class="modal__content-project-techniques">Used techniques: ${item.techniques}</div>
-            <a href=${item.link} class="modal__content-project-link" target="_blank">Click to explore</a>
-            <a href=${item.repository} class="modal__content-project-repository" target="_blank">GitHub repository</a>
+            <div class="modal-project__content-project-title">${item.title}</div>
+            <div class="modal-project__content-project-techniques">Used techniques: ${item.techniques}</div>
+            <a href=${item.link} class="modal-project__content-project-link" target="_blank">Click to explore</a>
+            <a href=${item.repository} class="modal-project__content-project-repository" target="_blank">GitHub repository</a>
         `;
 
         modalContent.append(itemModal);
@@ -215,7 +214,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     modal.addEventListener("click", e => {
-        if (e.target === modal || e.target.closest(".modal__content-close-btn")) {
+        if (e.target === modal || e.target.closest(".modal-project__content-close-btn")) {
             closeModal();
         }
     });

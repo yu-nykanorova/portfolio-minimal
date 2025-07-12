@@ -40,6 +40,7 @@
         url("fonts/Poppinspoppins-semiboldmedium.woff") format("woff"),
         url("fonts/Poppinspoppins-semiboldmedium.woff2") format("woff2");
 }
+
 @font-face {
     font-family: "Poppins";
     font-style: normal;
@@ -47,5 +48,13 @@
     src: 
         url("fonts/Poppinspoppins-boldsemibold.woff") format("woff"),
         url("fonts/Poppinspoppins-boldsemibold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: 
+        url("fonts/Roboto-Regular.woff") format("woff");
 }
 

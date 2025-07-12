@@ -20,10 +20,10 @@
             padding: 40rem 20rem 40rem 40rem;
         }
         @include tablet {
-            padding: 40rem 10rem 40rem 30rem;
+            padding: 40rem 10rem 40rem 50rem;
         }
         @include tablet-small {
-            padding: 40rem 5rem 40rem 30rem;
+            padding: 40rem 10rem 40rem 40rem;
         }
         @include mobile {
             padding: 30rem 15rem 15rem 20rem;
@@ -40,17 +40,13 @@
             }
 
             @include tablet {
-                font-size: 32rem;
+                font-size: 34rem;
                 margin-bottom: 30rem;
             }
 
             @include tablet-small {
-                font-size: 26rem;
+                font-size: 28rem;
                 margin-bottom: 20rem;
-            }
-
-            @include mobile {
-                font-size: 24rem;
             }
 
             h1 {
@@ -64,22 +60,23 @@
                 }
 
                 @include tablet {
-                    font-size: 30rem;
+                    font-size: 34rem;
                 }
 
                 @include tablet-small {
                     margin-top: 8rem;
-                    font-size: 26rem;
+                    font-size: 28rem;
                 }
 
                 @include mobile {
                     margin-top: 5rem;
-                    font-size: 22rem;
+                    font-size: 24rem;
                 }
             }
         }
 
         &-desc {
+            font-family: var(--font-second);
             font-size: 24rem;
             font-weight: 400;
             margin-bottom: 40rem;
@@ -121,7 +118,9 @@
             .btn-cv, .btn-cv-download, .btn-contact {
                 flex: 0 0 calc((100% - 20rem) / 2);
                 max-width: 200rem;
+                padding: 12rem 14rem;
                 text-align: center;
+                align-self: flex-start;
 
                 @include tablet {
                     max-width: initial;
@@ -135,11 +134,24 @@
                     font-size: 14rem;
                     padding: 10rem 8rem;
                 }
+
+                @include mobile {
+                    width: 60%;
+                    align-self: center;
+                }
             }
 
             .btn-cv {
-                background-color: var(--c-brand-dark-blue);
-                padding: 12rem 14rem;
+                background-color: var(--c-brand-dark-green);
+                box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
+
+                &-text, &-text-hover {
+                    font-size: 18rem;
+
+                    @include mobile {
+                        font-size: 16rem;
+                    }
+                }
 
                 &-text-hover {
                     display: none;
@@ -160,13 +172,15 @@
             }
 
             .btn-contact {
-                padding: 12rem 14rem;
                 background-color: var(--c-brand-light-blue);
-                color: var(--c-brand-dark-blue);
-                font-weight: 500;
+                color: var(--c-brand-dark-green);
+                font-size: 18rem;
+                box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
 
                 &:hover {
-                    box-shadow: 1rem 1rem 2rem 1rem var(--c-brand-dark-blue-half-transp);
+                    background-color: var(--c-brand-white);
+                    color: var(--c-brand-dark-brown);
+                    box-shadow: 0 0 2rem 0 var(--c-brand-dark-green-half-transp);
                 }
             }
         }
@@ -201,11 +215,12 @@
             right: 0;
             top: 50%;
             transform: translateY(-50%);
-            padding: 20rem;
-            background-color: var(--c-brand-dark-blue-half-transp);
+            padding: 15rem;
+            background-color: var(--c-brand-dark-green-half-transp);
             border-radius: 5rem 0 0 5rem;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
 
             @include mobile {
                 padding: 12rem;
@@ -213,21 +228,18 @@
 
             .fa-solid {
                 color: var(--c-brand-white-half-transp);
-                font-size: 40rem;
+                font-size: 30rem;
                 transition: var(--transition);
 
-                @include tablet {
-                    font-size: 30rem;
-                }
                 @include mobile {
                     font-size: 26rem;
                 }
             }
 
             &:hover {
-                background-color: var(--c-brand-light-blue);
+                background-color: var(--c-brand-white);
                 .fa-solid {
-                    color: var(--c-brand-dark-blue);
+                    color: var(--c-brand-dark-brown);
                 }
             }
         }

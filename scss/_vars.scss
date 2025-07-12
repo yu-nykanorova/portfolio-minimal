@@ -5,6 +5,7 @@ $mobile: 576px;
 
 :root {
     --font-family: "Poppins", sans-serif;
+    --font-second: "Roboto", sans-serif;
 
     --transition: .2s all ease-in-out;
 
@@ -12,11 +13,11 @@ $mobile: 576px;
 	--c-black: rgb(0, 0, 0);
 	--c-black-half-transp: rgb(0, 0, 0, 0.5);
     --c-gray-half-transp: rgba(148, 148, 148, 0.7);
-    --c-brand-white: rgb(254, 246, 243);
-    --c-brand-white-half-transp: rgba(252, 250, 248, 0.7);
-    --c-brand-light-blue: rgb(173, 246, 236);
-    --c-brand-dark-blue: rgb(9, 43, 95);
-    --c-brand-dark-blue-half-transp: rgba(9, 43, 95, 0.7);
-    --c-brand-dark-brown: rgb(83, 22, 37);
-    --c-brand-dark-brown-half-transp: rgba(104, 59, 70, 0.7);
+    --c-brand-white: rgb(254, 255, 255);
+    --c-brand-white-half-transp: rgba(254, 255, 255, 0.719);
+    --c-brand-light-blue: rgb(210, 245, 255);
+    --c-brand-dark-green: rgb(2, 50, 70);
+    --c-brand-dark-green-half-transp: rgba(9, 71, 95, 0.7);
+    --c-brand-dark-brown: rgb(93, 0, 30);
+    --c-brand-dark-brown-half-transp: rgba(93, 0, 30, 0.6);
 }
