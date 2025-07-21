@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/no_photo.png",
             altImg: "space",
             title: "Space",
-            techniques: "techniques",
+            techniques: "React, Vite + SWC, SCSS, REST APIs",
             link: "https://space-git-main-yuliias-projects-dbf12d92.vercel.app",
             repository: "https://github.com/yu-nykanorova/space"    
         },
@@ -27,8 +27,8 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/enver.jpg",
             altImg: "enver",
             title: "Enver",
-            techniques: "techniques",
-            link: "#",
+            techniques: "HTML5, SCSS, JS, Gulp, Webpack",
+            link: "https://enver-sigma-lake.vercel.app/",
             repository: "https://github.com/yu-nykanorova/enver"    
         },
         {
@@ -186,7 +186,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 <img src=${item.img} alt=${item.altImg}>
             </div>
             <div class="modal-project__content-project-title">${item.title}</div>
-            <div class="modal-project__content-project-techniques">Used techniques: ${item.techniques}</div>
+            <div class="modal-project__content-project-techniques">Used techniques: <span>${item.techniques}</span></div>
             <a href=${item.link} class="modal-project__content-project-link" target="_blank">Click to explore</a>
             <a href=${item.repository} class="modal-project__content-project-repository" target="_blank">GitHub repository</a>
         `;

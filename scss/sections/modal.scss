@@ -128,14 +128,21 @@
         }
 
         &-project-techniques {
-            margin-inline: 0;
-            padding: 7rem 0;
-            color: var(--c-brand-dark-green);
-            text-shadow: 0 0 1rem var(--c-gray-half-transp);
+            color: var(--c-brand-dark-brown);
             font-family: var(--font-second);
             font-size: 18rem;
+            font-weight: 400;
+            letter-spacing: 1rem;
+            text-shadow: 0 0 1rem var(--c-gray-half-transp);
             background-color: var(--c-brand-white);
+            margin-inline: 0;
+            padding: 7rem 0;
 
+            span {
+                color: var(--c-brand-dark-green);
+                font-family: var(--font-second);
+            }
+            
             @include tablet {
                 padding: 5rem 0;
             }
