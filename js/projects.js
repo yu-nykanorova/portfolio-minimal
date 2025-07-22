@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
             altImg: "coffee",
             title: "Coffee",
             techniques: "techniques",
-            link: "#",
+            link: "https://coffee-app-react-json-server.vercel.app/",
             repository: "https://github.com/yu-nykanorova/coffee_app_react_json-server"    
         },
         {
