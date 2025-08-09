@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/coffee.jpg",
             altImg: "coffee",
             title: "Coffee",
-            techniques: "techniques",
+            techniques: "React, Vite + SWC, SCSS, JSON Server (deployed on Render), mobile-first responsive",
             link: "https://coffee-app-react-json-server.vercel.app/",
             repository: "https://github.com/yu-nykanorova/coffee_app_react_json-server"    
         },
@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/no_photo.png",
             altImg: "space",
             title: "Space",
-            techniques: "React, Vite + SWC, SCSS, REST APIs",
+            techniques: "React, Vite + SWC, SCSS, REST APIs, responsive design",
             link: "https://space-git-main-yuliias-projects-dbf12d92.vercel.app",
             repository: "https://github.com/yu-nykanorova/space"    
         },
@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/enver.jpg",
             altImg: "enver",
             title: "Enver",
-            techniques: "HTML5, SCSS, JS, Gulp, Webpack",
+            techniques: "HTML5, SCSS, JS (jQuery), Owl Carousel, Gulp, Webpack, responsive design",
             link: "https://enver-sigma-lake.vercel.app/",
             repository: "https://github.com/yu-nykanorova/enver"    
         },
@@ -36,8 +36,8 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/movie.jpg",
             altImg: "movie",
             title: "Movie",
-            techniques: "techniques",
-            link: "#",
+            techniques: "React, Vite + SWC, SCSS, React Context API, LocalStorage, responsive design",
+            link: "https://movie-mu-roan.vercel.app/",
             repository: "https://github.com/yu-nykanorova/movie"    
         },
         {
@@ -45,8 +45,8 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/plant_shop.jpg",
             altImg: "plant shop",
             title: "Plant Shop",
-            techniques: "techniques",
-            link: "#",
+            techniques: "HTML5, Tailwind CSS, responsive design",
+            link: "https://plant-shop-tailwindcss.vercel.app/",
             repository: "https://github.com/yu-nykanorova/plant-shop_tailwindcss"    
         },
         {
@@ -54,8 +54,8 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/no_photo.png",
             altImg: "skilline",
             title: "Skilline",
-            techniques: "techniques",
-            link: "#",
+            techniques: "React, Vite + SWC, SCSS, Swiper, responsive design",
+            link: "https://skilline-ivory.vercel.app/",
             repository: "https://github.com/yu-nykanorova/skilline"    
         },
         {
@@ -63,8 +63,8 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/no_photo.png",
             altImg: "food delivery",
             title: "Food delivery",
-            techniques: "techniques",
-            link: "#",
+            techniques: "React, Vite + SWC, SCSS, responsive design",
+            link: "https://food-delivery-fawn-xi.vercel.app/",
             repository: "https://github.com/yu-nykanorova/food_delivery"    
         },
         {
@@ -72,8 +72,8 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/fashion_shop.jpg",
             altImg: "fashion shop",
             title: "Fashion Shop",
-            techniques: "techniques",
-            link: "#",
+            techniques: "HTML5, SCSS, Vanilla JS (burger menu), responsive design",
+            link: "https://fashion-shop-orcin.vercel.app/",
             repository: "https://github.com/yu-nykanorova/fashion-shop"    
         },
         {
@@ -81,26 +81,17 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/diagnostic_center.jpg",
             altImg: "diagnostic center",
             title: "Diagnostic center",
-            techniques: "techniques",
-            link: "#",
+            techniques: "HTML5, SCSS, JS, Owl Carousel, responsive design",
+            link: "https://hw-16-diagnostic-center.vercel.app/",
             repository: "https://github.com/yu-nykanorova/HW16_diagnostic-center"    
         },
         {
             id: 10,
             img: "img/projects/no_photo.png",
-            altImg: "watch",
-            title: "Watch",
-            techniques: "techniques",
-            link: "#",
-            repository: "https://github.com/yu-nykanorova/TW_Watch"    
-        },
-        {
-            id: 11,
-            img: "img/projects/no_photo.png",
             altImg: "virtual reality",
             title: "Virtual reality",
-            techniques: "techniques",
-            link: "#",
+            techniques: "HTML5, SCSS, Vanilla JS (burger menu), responsive design",
+            link: "https://virtual-reality-gules.vercel.app/",
             repository: "https://github.com/yu-nykanorova/virtual_reality"    
         },
     ]
@@ -153,7 +144,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // displaying projects
 
-    const projectsToShow = 8;
+    const projectsToShow = 6;
     showProjects(projects, 0, projectsToShow, true);
 
     moreProjectsButton.addEventListener("click", () => {
