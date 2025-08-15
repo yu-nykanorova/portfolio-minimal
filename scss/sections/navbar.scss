@@ -53,7 +53,11 @@
 
         .fa-solid {
             color: var(--c-brand-white-half-transp);
-            font-size: 34rem;
+            font-size: 40rem;
+
+            @include desktop-small {
+                font-size: 36rem;
+            }
 
             @include tablet-small {
                 font-size: 30rem;

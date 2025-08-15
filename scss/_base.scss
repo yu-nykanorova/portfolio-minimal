@@ -125,6 +125,82 @@ button {
 			height: 10rem;
 		}
 	}
+
+	&__lang-buttons {
+		position: absolute;
+		width: 130rem;
+		bottom: calc(100% + 38rem);
+		right: 0;
+		display: flex;
+		gap: 20rem;
+		z-index: 3;
+
+		@include desktop-small {
+			width: 100rem;
+		}
+
+		@include tablet-small {
+			width: 36rem;
+			flex-direction: column;
+			gap: 6rem;
+			bottom: calc(100% + 20rem);
+		}
+
+		@include mobile {
+			width: 28rem;
+			bottom: calc(100% + 5rem);
+		}
+
+		.lg-btn {
+			flex: 1;
+			display: flex;
+			border-radius: 10rem;
+			outline: 2px solid var(--c-brand-white);
+			position: relative;
+			cursor: pointer;
+
+			@include tablet-small {
+				outline: 1px solid var(--c-brand-white);
+			}
+
+			svg {
+				width: 100%;
+				border-radius: 10rem;
+			}
+
+			&::before {
+				position: absolute;
+				bottom: -26rem;
+				color: var(--c-white);
+				font-size: 18rem;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				@include desktop-small {
+					font-size: 16rem;
+				}
+
+				@include tablet-small {
+					height: 100%;
+					bottom: 0;
+					left: -100%;
+				}
+
+				@include mobile {
+					display: none;
+				}
+			}
+
+			&.ua-btn::before {
+				content: "UA";
+			}
+			&.eng-btn::before {
+				content: "EN";
+			}
+		}
+	}
 }
 
 .footer {

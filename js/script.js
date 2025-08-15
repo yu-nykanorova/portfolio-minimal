@@ -1,6 +1,25 @@
 
 window.addEventListener("DOMContentLoaded", () => {
 
+    // SWITCH LANGUAGE
+
+    const switchToLang = (lang) => {
+        const elements = document.querySelectorAll("[data-i18n]");
+        elements.forEach((element) => {
+            const key = element.getAttribute("data-i18n");
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+        localStorage.setItem("lang", lang);
+    };
+
+    const savedLang = localStorage.getItem("lang") || "ua";
+    switchToLang(savedLang);
+
+    document.getElementById("ua-btn").addEventListener("click", () => switchToLang("ua"));
+    document.getElementById("eng-btn").addEventListener("click", () => switchToLang("en"));
+
     // CONTACTS SECTION
     
     // used DOM elements
