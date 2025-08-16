@@ -8,13 +8,13 @@ window.addEventListener("DOMContentLoaded", () => {
         elements.forEach((element) => {
             const key = element.getAttribute("data-i18n");
             if (translations[lang] && translations[lang][key]) {
-                element.textContent = translations[lang][key];
+                element.innerHTML = translations[lang][key];
             }
         });
         localStorage.setItem("lang", lang);
     };
 
-    const savedLang = localStorage.getItem("lang") || "ua";
+    const savedLang = localStorage.getItem("lang") || "en";
     switchToLang(savedLang);
 
     document.getElementById("ua-btn").addEventListener("click", () => switchToLang("ua"));

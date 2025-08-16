@@ -1,5 +1,6 @@
 
 window.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("lang") || "en";
     
     // projects data
 
@@ -151,10 +152,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
         if (allProjectsShown) {
             showProjects(projects, 0, projectsToShow, true);
-            moreProjectsButton.textContent = "Show more...";
+            moreProjectsButton.textContent = translations[savedLang].projects_moreButton;
         } else {
             showProjects(projects, projectsToShow, projects.length);
-            moreProjectsButton.textContent = "Hide";
+            moreProjectsButton.textContent = translations[savedLang].projects_hideButton;
         }
 
         allProjectsShown = !allProjectsShown;
@@ -177,9 +178,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 <img src=${item.img} alt=${item.altImg}>
             </div>
             <div class="modal-project__content-project-title">${item.title}</div>
-            <div class="modal-project__content-project-techniques">Used techniques: <span>${item.techniques}</span></div>
-            <a href=${item.link} class="modal-project__content-project-link" target="_blank">Click to explore</a>
-            <a href=${item.repository} class="modal-project__content-project-repository" target="_blank">GitHub repository</a>
+            <div class="modal-project__content-project-techniques">${translations[savedLang].project_techniques} <span>${item.techniques}</span></div>
+            <a href=${item.link} class="modal-project__content-project-link" target="_blank">${translations[savedLang].project_linkToExplore}</a>
+            <a href=${item.repository} class="modal-project__content-project-repository" target="_blank">${translations[savedLang].project_linkToGitHub}</a>
         `;
 
         modalContent.append(itemModal);
