@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 2,
-            img: "img/projects/no_photo.png",
+            img: "img/projects/space.jpg",
             altImg: "space",
             title: "Space",
             techniques: "React, Vite + SWC, SCSS, REST APIs, responsive design",
@@ -52,21 +52,21 @@ window.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 6,
-            img: "img/projects/no_photo.png",
-            altImg: "skilline",
-            title: "Skilline",
-            techniques: "React, Vite + SWC, SCSS, Swiper, responsive design",
-            link: "https://skilline-ivory.vercel.app/",
-            repository: "https://github.com/yu-nykanorova/skilline"    
-        },
-        {
-            id: 7,
-            img: "img/projects/no_photo.png",
+            img: "img/projects/food_delivery.jpg",
             altImg: "food delivery",
             title: "Food delivery",
             techniques: "React, Vite + SWC, SCSS, responsive design",
             link: "https://food-delivery-fawn-xi.vercel.app/",
             repository: "https://github.com/yu-nykanorova/food_delivery"    
+        },
+        {
+            id: 7,
+            img: "img/projects/skilline.jpg",
+            altImg: "skilline",
+            title: "Skilline",
+            techniques: "React, Vite + SWC, SCSS, Swiper, responsive design",
+            link: "https://skilline-ivory.vercel.app/",
+            repository: "https://github.com/yu-nykanorova/skilline"    
         },
         {
             id: 8,
@@ -88,7 +88,7 @@ window.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 10,
-            img: "img/projects/no_photo.png",
+            img: "img/projects/virtual_reality.jpg",
             altImg: "virtual reality",
             title: "Virtual reality",
             techniques: "HTML5, SCSS, Vanilla JS (burger menu), responsive design",
@@ -178,9 +178,13 @@ window.addEventListener("DOMContentLoaded", () => {
                 <img src=${item.img} alt=${item.altImg}>
             </div>
             <div class="modal-project__content-project-title">${item.title}</div>
-            <div class="modal-project__content-project-techniques">${translations[savedLang].project_techniques} <span>${item.techniques}</span></div>
-            <a href=${item.link} class="modal-project__content-project-link" target="_blank">${translations[savedLang].project_linkToExplore}</a>
-            <a href=${item.repository} class="modal-project__content-project-repository" target="_blank">${translations[savedLang].project_linkToGitHub}</a>
+            <div class="modal-project__content-project-info">
+                <div class="modal-project__content-project-info-techniques">${translations[savedLang].project_techniques} <br> <span>${item.techniques}</span></div>
+                <div class="modal-project__content-project-info-buttons">
+                    <a href=${item.link} class="project-link" target="_blank">${translations[savedLang].project_linkToExplore}</a>
+                    <a href=${item.repository} class="project-repository" target="_blank">${translations[savedLang].project_linkToGitHub}</a>
+                </div>
+            </div>
         `;
 
         modalContent.append(itemModal);

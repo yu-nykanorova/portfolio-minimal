@@ -9,7 +9,7 @@ html {
 body {
 	font-size: 16rem;
 	font-family: var(--font-family);
-	background-image: url("img/wavy-sea.jpg");
+	background-image: url("img/sunrise-sea.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	display: flex;
@@ -158,6 +158,12 @@ button {
 			outline: 2px solid var(--c-brand-white);
 			position: relative;
 			cursor: pointer;
+			transition: var(--transition);
+
+			&:hover {
+				transform: scale(1.07);
+				outline: 2px solid var(--c-brand-light-blue);
+			}
 
 			@include tablet-small {
 				outline: 1px solid var(--c-brand-white);
@@ -208,8 +214,14 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	gap: 10rem;
 	margin-bottom: 5rem;
 	padding: 10rem;
+
+	&__github {
+		text-decoration: underline;
+	}
 
 	&__copyright {
 		font-family: var(--font-second);

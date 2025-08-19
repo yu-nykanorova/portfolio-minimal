@@ -51,7 +51,7 @@
 
             h1 {
                 font-size: 46rem;
-                font-weight: 500;
+                font-weight: 400;
                 color: var(--c-brand-dark-brown);
                 margin-top: 5rem;
 
@@ -157,7 +157,7 @@
                     display: none;
                 }
 
-                &:hover {
+                &:hover {                   
                     .btn-cv-text {
                         display: none;
                     }
