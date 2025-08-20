@@ -18,17 +18,25 @@
         width: 100%;
     }
 
-	&__desc {
-        margin-bottom: 20rem;
+    &__desc {
         font-family: var(--font-second);
         font-size: 20rem;
-
-        @include tablet {
-            margin-bottom: 12rem;            
-        }
+        font-weight: 600;
+        letter-spacing: 4rem;
+        margin-bottom: 10rem;  
 
         @include tablet-small {
             font-size: 18rem;
+        }
+    }
+
+	&__comment {
+        margin-bottom: 20rem;
+        font-family: var(--font-second);
+        font-size: 18rem;
+
+        @include tablet-small {
+            font-size: 16rem;
         }
     }
 
@@ -101,7 +109,6 @@
 
             &-text {
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 gap: 7rem;
 
@@ -149,7 +156,7 @@
     &__btn-more {
         padding: 12rem 23rem;
         width: 200rem;
-        margin-inline: auto;
+        margin: 30rem auto;
         background-color: var(--c-brand-dark-brown);
         color: var(--c-brand-white);
         box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
@@ -163,13 +170,54 @@
             font-size: 16rem;
         }
         @include mobile {
-            width: 100%;
+            width: 50%;
             padding: 12rem 8rem;
             font-size: 14rem;
+            margin: 10rem auto;
         }
 
         &:hover {
             box-shadow: 0 0 2rem 0 var(--c-brand-white-half-transp);
+        }
+    }
+
+    &__list_team {
+        margin-bottom: 30rem;
+
+        .team-project-item {
+            display: flex;
+            align-items: center;
+            gap: 20rem;
+            margin-bottom: 20rem;
+            border-radius: 8rem;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 10rem;
+                text-align: center;
+            }
+
+            &__image {
+                border-radius: 8rem;
+                flex: 0 0 45%;
+
+                @include mobile {
+                    flex-direction: column;
+                    flex: initial;
+                    width: 100%;
+                }
+
+                img {
+                    border-radius: 8rem;
+                }
+            }
+
+            &__desc {
+
+                h3 {}
+
+                p {}
+            }
         }
     }
 }

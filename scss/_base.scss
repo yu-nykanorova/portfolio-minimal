@@ -256,7 +256,7 @@ button {
 .chapter-title {
 	font-size: 38rem;
 	font-weight: 400;
-	margin-bottom: 20rem;
+	margin-bottom: 30rem;
 	color: var(--c-brand-dark-brown);
 
 	@include desktop-small {
@@ -265,17 +265,17 @@ button {
 
 	@include tablet {
 		font-size: 32rem;
-		margin-bottom: 18rem;            
+		margin-bottom: 20rem;            
 	}
 
 	@include tablet-small {
 		font-size: 26rem;
-		margin-bottom: 14rem;            
+		margin-bottom: 16rem;            
 	}
 
 	@include mobile {
 		font-size: 20rem;
-		margin-bottom: 10rem; 
+		margin-bottom: 12rem; 
 	}
 }
 

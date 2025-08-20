@@ -118,7 +118,7 @@ window.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="projects__item-info">
                 <div class="projects__item-info-text">
-                    <div class="projects__item-title">${title}</div>
+                    <h3 class="projects__item-title">${title}</h3>
                 </div>
                 <div class="projects__item-info-arrow">
                     <i class="fa-solid fa-chevron-right"></i>
@@ -177,7 +177,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="modal-project__content-project-image">
                 <img src=${item.img} alt=${item.altImg}>
             </div>
-            <div class="modal-project__content-project-title">${item.title}</div>
+            <h3 class="modal-project__content-project-title">${item.title}</h3>
             <div class="modal-project__content-project-info">
                 <div class="modal-project__content-project-info-techniques">${translations[savedLang].project_techniques} <br> <span>${item.techniques}</span></div>
                 <div class="modal-project__content-project-info-buttons">
