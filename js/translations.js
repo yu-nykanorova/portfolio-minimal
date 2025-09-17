@@ -30,7 +30,8 @@ const translations = {
         contacts_linkToMail: "Написати",
         project_techniques: "Технології:",
         project_linkToExplore: "Переглянути демо",
-        project_linkToGitHub: "GitHub репозиторій"
+        project_linkToGitHub: "GitHub репозиторій",
+        team_projectContribution: "<span>Персональний внесок</span> описано у README файлі у GitHub репозиторії"
     },
     en: {
         nav_home: "Home",
@@ -63,6 +64,7 @@ const translations = {
         contacts_linkToMail: "Click to msg",
         project_techniques: "Used techniques:",
         project_linkToExplore: "Click to explore",
-        project_linkToGitHub: "GitHub repository"
+        project_linkToGitHub: "GitHub repository",
+        team_projectContribution: "<span>Personal contribution</span> is described in README file in GitHub repository"
     }
 }

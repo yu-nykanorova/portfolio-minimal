@@ -59,7 +59,7 @@ li {
   --c-black-half-transp: rgb(0, 0, 0, 0.5);
   --c-gray-half-transp: rgba(148, 148, 148, 0.7);
   --c-brand-white: rgb(254, 255, 255);
-  --c-brand-white-half-transp: rgba(254, 255, 255, 0.719);
+  --c-brand-white-half-transp: rgba(254, 255, 255, 0.7);
   --c-brand-light-blue: rgb(210, 245, 255);
   --c-brand-dark-green: rgb(2, 50, 70);
   --c-brand-dark-green-half-transp: rgba(9, 71, 95, 0.7);
@@ -870,6 +870,7 @@ button {
         .education__item-period {
           font-size: 16rem; } }
     .education__item-name {
+      display: block;
       font-size: 22rem;
       font-weight: 500;
       line-height: 110%;
@@ -1069,10 +1070,19 @@ button {
     font-size: 20rem;
     font-weight: 600;
     letter-spacing: 4rem;
-    margin-bottom: 10rem; }
+    margin-bottom: 20rem;
+    position: relative; }
     @media (max-width: 768px) {
       .projects__desc {
         font-size: 18rem; } }
+    .projects__desc::after {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 1rem;
+      width: 50%;
+      bottom: -5rem;
+      background: var(--c-brand-dark-green); }
   .projects__comment {
     margin-bottom: 20rem;
     font-family: var(--font-second);
@@ -1185,7 +1195,7 @@ button {
   .projects__btn-more {
     padding: 12rem 23rem;
     width: 200rem;
-    margin: 30rem auto;
+    margin: 40rem auto;
     background-color: var(--c-brand-dark-brown);
     color: var(--c-brand-white);
     -webkit-box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
@@ -1202,8 +1212,7 @@ button {
       .projects__btn-more {
         width: 50%;
         padding: 12rem 8rem;
-        font-size: 14rem;
-        margin: 10rem auto; } }
+        font-size: 14rem; } }
     .projects__btn-more:hover {
       -webkit-box-shadow: 0 0 2rem 0 var(--c-brand-white-half-transp);
               box-shadow: 0 0 2rem 0 var(--c-brand-white-half-transp); }
@@ -1219,7 +1228,7 @@ button {
       gap: 20rem;
       margin-bottom: 20rem;
       border-radius: 8rem; }
-      @media (max-width: 576px) {
+      @media (max-width: 768px) {
         .projects__list_team .team-project-item {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
@@ -1230,8 +1239,10 @@ button {
       .projects__list_team .team-project-item__image {
         border-radius: 8rem;
         -webkit-box-flex: 0;
-            -ms-flex: 0 0 45%;
-                flex: 0 0 45%; }
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+        -webkit-box-shadow: 1rem 1rem 3rem 1rem rgba(9, 43, 95, 0.4);
+                box-shadow: 1rem 1rem 3rem 1rem rgba(9, 43, 95, 0.4); }
         @media (max-width: 576px) {
           .projects__list_team .team-project-item__image {
             -webkit-box-orient: vertical;
@@ -1244,6 +1255,75 @@ button {
             width: 100%; } }
         .projects__list_team .team-project-item__image img {
           border-radius: 8rem; }
+      .projects__list_team .team-project-item__desc-title {
+        margin-bottom: 15rem;
+        font-size: 26rem;
+        color: var(--c-brand-dark-brown); }
+        @media (max-width: 576px) {
+          .projects__list_team .team-project-item__desc-title {
+            font-size: 22rem; } }
+      .projects__list_team .team-project-item__desc-techniques {
+        font-size: 18rem;
+        margin-bottom: 10rem; }
+        @media (max-width: 576px) {
+          .projects__list_team .team-project-item__desc-techniques {
+            font-size: 16rem; } }
+        .projects__list_team .team-project-item__desc-techniques span {
+          font-weight: bolder; }
+      .projects__list_team .team-project-item__desc-contribution {
+        font-size: 18rem;
+        margin-bottom: 10rem; }
+        @media (max-width: 576px) {
+          .projects__list_team .team-project-item__desc-contribution {
+            font-size: 16rem; } }
+        .projects__list_team .team-project-item__desc-contribution span {
+          font-weight: bolder; }
+      .projects__list_team .team-project-item__desc-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 20rem; }
+        @media (max-width: 768px) {
+          .projects__list_team .team-project-item__desc-buttons {
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly; } }
+        @media (max-width: 576px) {
+          .projects__list_team .team-project-item__desc-buttons {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            gap: 10rem; } }
+        .projects__list_team .team-project-item__desc-buttons .project-link, .projects__list_team .team-project-item__desc-buttons .project-repository {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 calc((100% - 20rem) / 2);
+                  flex: 0 0 calc((100% - 20rem) / 2);
+          font-size: 16rem;
+          font-weight: 600;
+          color: var(--c-brand-dark-green);
+          letter-spacing: 1rem;
+          background-color: var(--c-brand-light-blue);
+          -webkit-box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
+                  box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
+          max-width: 150rem;
+          padding: 12rem 14rem;
+          text-align: center; }
+          @media (max-width: 576px) {
+            .projects__list_team .team-project-item__desc-buttons .project-link, .projects__list_team .team-project-item__desc-buttons .project-repository {
+              -webkit-box-flex: initial;
+                  -ms-flex: initial;
+                      flex: initial;
+              width: 50%;
+              font-size: 14rem; } }
+          .projects__list_team .team-project-item__desc-buttons .project-link:hover, .projects__list_team .team-project-item__desc-buttons .project-repository:hover {
+            background-color: var(--c-brand-white);
+            color: var(--c-brand-dark-brown);
+            -webkit-box-shadow: 0 0 2rem 0 var(--c-brand-dark-green-half-transp);
+                    box-shadow: 0 0 2rem 0 var(--c-brand-dark-green-half-transp); }
 
 .contacts {
   padding: 50rem; }
