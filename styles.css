@@ -594,7 +594,8 @@ button {
       font-family: var(--font-second);
       font-size: 24rem;
       font-weight: 400;
-      margin-bottom: 40rem; }
+      margin-bottom: 40rem;
+      text-shadow: 0 0 1rem var(--c-brand-dark-brown-half-transp); }
       @media (max-width: 992px) {
         .home__welcome-desc {
           font-size: 20rem;
@@ -640,7 +641,6 @@ button {
             -ms-flex: 0 0 calc((100% - 20rem) / 2);
                 flex: 0 0 calc((100% - 20rem) / 2);
         max-width: 200rem;
-        padding: 12rem 14rem;
         text-align: center;
         -ms-flex-item-align: start;
             align-self: flex-start; }
@@ -663,6 +663,8 @@ button {
             -ms-flex-item-align: center;
                 align-self: center; } }
       .home__welcome-buttons .btn-cv {
+        padding: 12rem 10rem;
+        white-space: nowrap;
         background-color: var(--c-brand-dark-green);
         -webkit-box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
                 box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp); }
@@ -687,6 +689,7 @@ button {
               -ms-flex-pack: space-evenly;
                   justify-content: space-evenly; }
       .home__welcome-buttons .btn-contact {
+        padding: 12rem 14rem;
         background-color: var(--c-brand-light-blue);
         color: var(--c-brand-dark-green);
         font-size: 18rem;
@@ -697,6 +700,8 @@ button {
           color: var(--c-brand-dark-brown);
           -webkit-box-shadow: 0 0 2rem 0 var(--c-brand-dark-green-half-transp);
                   box-shadow: 0 0 2rem 0 var(--c-brand-dark-green-half-transp); }
+      .home__welcome-buttons .btn-cv-download {
+        padding: 12rem 14rem; }
   .home__image {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
