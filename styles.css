@@ -636,16 +636,16 @@ button {
           -webkit-box-align: center;
               -ms-flex-align: center;
                   align-items: center; } }
-      .home__welcome-buttons .btn-cv, .home__welcome-buttons .btn-cv-download, .home__welcome-buttons .btn-contact {
+      .home__welcome-buttons .btn-cv, .home__welcome-buttons .btn-contact {
         -webkit-box-flex: 0;
             -ms-flex: 0 0 calc((100% - 20rem) / 2);
                 flex: 0 0 calc((100% - 20rem) / 2);
-        max-width: 200rem;
+        padding: 12rem 14rem;
         text-align: center;
         -ms-flex-item-align: start;
             align-self: flex-start; }
         @media (max-width: 992px) {
-          .home__welcome-buttons .btn-cv, .home__welcome-buttons .btn-cv-download, .home__welcome-buttons .btn-contact {
+          .home__welcome-buttons .btn-cv, .home__welcome-buttons .btn-contact {
             max-width: initial;
             -webkit-box-flex: initial;
                 -ms-flex: initial;
@@ -653,17 +653,16 @@ button {
             width: 60%;
             font-size: 16rem; } }
         @media (max-width: 768px) {
-          .home__welcome-buttons .btn-cv, .home__welcome-buttons .btn-cv-download, .home__welcome-buttons .btn-contact {
+          .home__welcome-buttons .btn-cv, .home__welcome-buttons .btn-contact {
             width: 80%;
             font-size: 14rem;
             padding: 10rem 8rem; } }
         @media (max-width: 576px) {
-          .home__welcome-buttons .btn-cv, .home__welcome-buttons .btn-cv-download, .home__welcome-buttons .btn-contact {
+          .home__welcome-buttons .btn-cv, .home__welcome-buttons .btn-contact {
             width: 60%;
             -ms-flex-item-align: center;
                 align-self: center; } }
       .home__welcome-buttons .btn-cv {
-        padding: 12rem 10rem;
         white-space: nowrap;
         background-color: var(--c-brand-dark-green);
         -webkit-box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
@@ -689,7 +688,6 @@ button {
               -ms-flex-pack: space-evenly;
                   justify-content: space-evenly; }
       .home__welcome-buttons .btn-contact {
-        padding: 12rem 14rem;
         background-color: var(--c-brand-light-blue);
         color: var(--c-brand-dark-green);
         font-size: 18rem;
@@ -700,8 +698,6 @@ button {
           color: var(--c-brand-dark-brown);
           -webkit-box-shadow: 0 0 2rem 0 var(--c-brand-dark-green-half-transp);
                   box-shadow: 0 0 2rem 0 var(--c-brand-dark-green-half-transp); }
-      .home__welcome-buttons .btn-cv-download {
-        padding: 12rem 14rem; }
   .home__image {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;

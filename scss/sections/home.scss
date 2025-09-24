@@ -116,9 +116,9 @@
                 align-items: center;
             }
 
-            .btn-cv, .btn-cv-download, .btn-contact {
+            .btn-cv, .btn-contact {
                 flex: 0 0 calc((100% - 20rem) / 2);
-                max-width: 200rem;
+                padding: 12rem 14rem;
                 text-align: center;
                 align-self: flex-start;
 
@@ -142,7 +142,6 @@
             }
 
             .btn-cv {
-                padding: 12rem 10rem;
                 white-space: nowrap;
                 background-color: var(--c-brand-dark-green);
                 box-shadow: 1rem 1rem 4rem 1rem var(--c-gray-half-transp);
@@ -174,7 +173,6 @@
             }
 
             .btn-contact {
-                padding: 12rem 14rem;
                 background-color: var(--c-brand-light-blue);
                 color: var(--c-brand-dark-green);
                 font-size: 18rem;
@@ -185,10 +183,6 @@
                     color: var(--c-brand-dark-brown);
                     box-shadow: 0 0 2rem 0 var(--c-brand-dark-green-half-transp);
                 }
-            }
-
-            .btn-cv-download {
-                padding: 12rem 14rem;
             }
         }
     }
