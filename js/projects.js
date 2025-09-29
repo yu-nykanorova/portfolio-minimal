@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
             img: "img/projects/space.jpg",
             altImg: "space",
             title: "Space",
-            techniques: "React, Vite + SWC, SCSS, REST APIs, responsive design",
+            techniques: "React, Vite + SWC, SCSS, REST APIs, Next.js (Express for API proxy), responsive design",
             link: "https://space-git-main-yuliias-projects-dbf12d92.vercel.app",
             repository: "https://github.com/yu-nykanorova/space"    
         },
